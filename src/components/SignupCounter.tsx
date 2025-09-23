@@ -1,23 +1,42 @@
-import React, { useMemo } from 'react';
-import { useBevoCount } from '../hooks/useBevoCount';
+import React, { useMemo } from "react";
+import { useBevoCount } from "../hooks/useBevoCount";
+import { useBrevoContacts } from "../hooks/useBrevoContacts";
 
 const SignupCounter: React.FC = () => {
   const { data: countData, isLoading, error } = useBevoCount();
+  const { data: contactsData } = useBrevoContacts();
+
+  // Debug : afficher les données dans la console
+  console.log('SignupCounter Debug:', { 
+    countData, 
+    contactsData, 
+    contactsLength: contactsData?.length,
+    error, 
+    isLoading 
+  });
 
   const avatars = useMemo(() => {
-    const names = ['Sarah Martin', 'Pierre Dubois', 'Marie Rousseau', 'Jean Moreau'];
-    return names.map((name, index) => {
-      const initials = name.split(' ').map(n => n[0]).join('');
-      const colors = ['bg-blue-500', 'bg-purple-500', 'bg-green-500', 'bg-orange-500'];
-      
+    // Utiliser les vrais contacts Brevo si disponibles
+    const contacts = contactsData || [];
+    const colors = ["3b82f6", "8b5cf6", "10b981", "f59e0b", "ef4444", "06b6d4"];
+
+    return contacts.slice(0, 4).map((contact, index) => {
+      // Utiliser l'email pour générer un nom affiché
+      const username = contact.email.split("@")[0];
+      const displayName = username.charAt(0).toUpperCase() + username.slice(1);
+
       return {
-        name,
-        initials,
+        email: contact.email,
+        displayName,
         color: colors[index % colors.length],
-        src: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=${colors[index % colors.length].replace('bg-', '').replace('-500', '')}&color=fff&size=32`
+        src: `https://ui-avatars.com/api/?name=${encodeURIComponent(
+          displayName
+        )}&background=${
+          colors[index % colors.length]
+        }&color=fff&size=32&rounded=true`,
       };
     });
-  }, []);
+  }, [contactsData]);
 
   if (error) {
     return (
@@ -44,7 +63,7 @@ const SignupCounter: React.FC = () => {
     );
   }
 
-  const count = countData?.total || 0;
+  const count = countData?.count || 0;
   const displayCount = isLoading ? '...' : count.toLocaleString('fr-FR');
 
   return (

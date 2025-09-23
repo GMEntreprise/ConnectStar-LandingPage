@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageSquare, Mail, Heart } from 'lucide-react';
+import DynamicCounter from './DynamicCounter';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -73,10 +74,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-gray-400" />
                 <a 
-                  href="mailto:contact@connectstar.app" 
+                  href="mailto:connectstart.contact@gmail.com" 
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  contact@connectstar.app
+                  connectstart.contact@gmail.com
                 </a>
               </div>
             </div>
@@ -93,7 +94,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-2xl font-bold text-blue-400 mb-1">2,847</div>
+              <DynamicCounter className="text-2xl font-bold text-blue-400 mb-1" />
               <div className="text-gray-400 text-sm">Inscrits en attente</div>
             </div>
             <div>

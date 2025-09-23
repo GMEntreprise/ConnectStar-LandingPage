@@ -1,5 +1,6 @@
 import React from 'react';
 import { Quote, Star } from 'lucide-react';
+import DynamicCounter from './DynamicCounter';
 
 const Testimonials = () => {
   const testimonials = [
@@ -77,7 +78,7 @@ const Testimonials = () => {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-3xl font-bold text-blue-600 mb-2">2,847</div>
+            <DynamicCounter className="text-3xl font-bold text-blue-600 mb-2" />
             <div className="text-gray-600">Inscrits en liste d'attente</div>
           </div>
           <div>

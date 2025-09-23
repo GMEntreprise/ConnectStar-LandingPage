@@ -1,22 +1,30 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
-import { bevoApi, BevoApiError } from '../lib/bevo';
+import { brevoApi, BrevoApiError } from '../lib/bevo';
 
-export const useBevoSignup = () => {
+export const useBrevoSignup = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (email: string) => bevoApi.addSubscriber(email),
+    mutationFn: async (email: string) => {
+      const contact = await brevoApi.addContact(email);
+      // Envoyer l'email de bienvenue en arrière-plan
+      brevoApi.sendWelcomeEmail(email).catch(console.error);
+      return contact;
+    },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['bevo', 'subscriber-count'] });
+      // Invalider toutes les queries liées au compteur et aux contacts
+      queryClient.invalidateQueries({ queryKey: ['brevo', 'contact-count'] });
+      queryClient.invalidateQueries({ queryKey: ['brevo', 'recent-contacts'] });
+      queryClient.invalidateQueries({ queryKey: ['bevo', 'subscriber-count'] }); // Pour compatibilité
       
       toast.success('Bienvenue dans l\'aventure ConnectStar !', {
-        description: 'Votre inscription a été confirmée. Vous recevrez bientôt plus d\'informations.',
+        description: 'Votre inscription a été confirmée. Vous recevrez un email de bienvenue dans quelques minutes.',
         duration: 5000,
       });
     },
     onError: (error: Error) => {
-      if (error instanceof BevoApiError) {
+      if (error instanceof BrevoApiError) {
         if (error.code === 'EMAIL_EXISTS') {
           toast.error('Email déjà enregistré', {
             description: 'Cette adresse est déjà dans notre liste d\'attente. Merci pour votre intérêt !',
@@ -38,3 +46,6 @@ export const useBevoSignup = () => {
     },
   });
 };
+
+// Alias pour compatibilité
+export const useBevoSignup = useBrevoSignup;
