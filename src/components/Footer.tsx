@@ -1,6 +1,5 @@
-import React from 'react';
-import { MessageSquare, Mail, Heart } from 'lucide-react';
-import DynamicCounter from './DynamicCounter';
+import { Heart, Mail, MessageSquare } from "lucide-react";
+import DynamicCounter from "./DynamicCounter";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,18 +12,25 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <MessageSquare className="w-6 h-6 text-white" />
+              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                <MessageSquare className="w-20 h-20 text-white" />
+                <img
+                  className=""
+                  src="/assets/connectStar-logo.png"
+                  alt="ConnectStar"
+                />
               </div>
               <span className="text-2xl font-bold">ConnectStar</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              La première messagerie chrétienne moderne avec la Bible intégrée. 
+              La première messagerie chrétienne moderne avec la Bible intégrée.
               Connectez-vous dans la foi, grandissez ensemble spirituellement.
             </p>
             <div className="flex items-center space-x-2 text-gray-400">
               <Heart className="w-4 h-4" />
-              <span className="text-sm">Fait avec amour pour la communauté chrétienne</span>
+              <span className="text-sm">
+                Fait avec amour pour la communauté chrétienne
+              </span>
             </div>
           </div>
 
@@ -33,32 +39,48 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-3">
               <li>
-                <button 
-                  onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("features")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   Fonctionnalités
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })}
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("vision")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   Ma Vision
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("faq")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   FAQ
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => document.getElementById('signup')?.scrollIntoView({ behavior: 'smooth' })}
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("signup")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   Inscription
@@ -73,8 +95,8 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-gray-400" />
-                <a 
-                  href="mailto:connectstart.contact@gmail.com" 
+                <a
+                  href="mailto:connectstart.contact@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   connectstart.contact@gmail.com
@@ -82,9 +104,12 @@ const Footer = () => {
               </div>
             </div>
             <div className="mt-6">
-              <h4 className="text-sm font-semibold text-gray-400 mb-3">SUPPORT & COMMUNAUTÉ</h4>
+              <h4 className="text-sm font-semibold text-gray-400 mb-3">
+                SUPPORT & COMMUNAUTÉ
+              </h4>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Notre équipe est là pour vous accompagner dans votre découverte de ConnectStar.
+                Notre équipe est là pour vous accompagner dans votre découverte
+                de ConnectStar.
               </p>
             </div>
           </div>
@@ -99,7 +124,9 @@ const Footer = () => {
             </div>
             <div>
               <div className="text-2xl font-bold text-blue-400 mb-1">50+</div>
-              <div className="text-gray-400 text-sm">Communautés partenaires</div>
+              <div className="text-gray-400 text-sm">
+                Communautés partenaires
+              </div>
             </div>
             <div>
               <div className="text-2xl font-bold text-blue-400 mb-1">12</div>
@@ -116,13 +143,20 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} ConnectStar. Tous droits réservés. • Développé avec passion pour la communauté chrétienne.
+              © {currentYear} ConnectStar. Tous droits réservés. • Développé
+              avec passion pour la communauté chrétienne.
             </div>
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+              >
                 Politique de confidentialité
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+              >
                 Conditions d'utilisation
               </a>
             </div>
@@ -132,7 +166,8 @@ const Footer = () => {
         {/* Final Message */}
         <div className="mt-8 text-center">
           <p className="text-gray-500 text-sm italic">
-            "Car là où deux ou trois sont rassemblés en mon nom, je suis au milieu d'eux." - Matthieu 18:20
+            "Car là où deux ou trois sont rassemblés en mon nom, je suis au
+            milieu d'eux." - Matthieu 18:20
           </p>
         </div>
       </div>
