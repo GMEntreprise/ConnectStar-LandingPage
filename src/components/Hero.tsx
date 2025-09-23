@@ -51,9 +51,9 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            Connectez-vous dans la
+            Messagerie Chrétienne Moderne avec
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-500 ml-4">
-              Foi
+              Bible Intégrée
             </span>
           </h1>
 

@@ -47,7 +47,7 @@ const Features = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Une messagerie qui nourrit votre foi
+            Application Chrétienne avec Bible Intégrée - Fonctionnalités
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             ConnectStar combine la modernité des meilleures apps de messagerie avec les valeurs et besoins de la communauté chrétienne.
