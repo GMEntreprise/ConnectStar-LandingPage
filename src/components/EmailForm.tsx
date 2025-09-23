@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Mail, ArrowRight } from 'lucide-react';
-import { emailSchema } from '../schemas/email';
-import { useBevoSignup } from '../hooks/useBevoSignup';
+import { ArrowRight, Mail } from "lucide-react";
+import React, { useState } from "react";
+import { useBevoSignup } from "../hooks/useBevoSignup";
+import { emailSchema } from "../schemas/email";
 
 interface EmailFormProps {
   onSuccess?: () => void;
 }
 
 const EmailForm: React.FC<EmailFormProps> = ({ onSuccess }) => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [validationError, setValidationError] = useState<string | null>(null);
   const signupMutation = useBevoSignup();
 
@@ -17,7 +17,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ onSuccess }) => {
     setValidationError(null);
 
     const validation = emailSchema.safeParse({ email });
-    
+
     if (!validation.success) {
       setValidationError(validation.error.errors[0].message);
       return;
@@ -25,7 +25,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ onSuccess }) => {
 
     try {
       await signupMutation.mutateAsync(validation.data.email);
-      setEmail('');
+      setEmail("");
       onSuccess?.();
     } catch {
       // Erreur gérée par le hook via toast
@@ -45,18 +45,18 @@ const EmailForm: React.FC<EmailFormProps> = ({ onSuccess }) => {
             setEmail(e.target.value);
             if (validationError) setValidationError(null);
           }}
-          placeholder="Votre adresse email"
+          placeholder="Votre email de contact"
           className={`w-full pl-12 pr-4 py-4 border-2 rounded-xl focus:outline-none transition-colors duration-200 text-lg ${
-            validationError 
-              ? 'border-red-300 focus:border-red-500' 
-              : 'border-gray-200 focus:border-blue-500'
+            validationError
+              ? "border-red-300 focus:border-red-500"
+              : "border-gray-200 focus:border-blue-500"
           }`}
         />
         {validationError && (
           <p className="mt-2 text-sm text-red-600">{validationError}</p>
         )}
       </div>
-      
+
       <button
         type="submit"
         disabled={signupMutation.isPending}

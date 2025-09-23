@@ -1,5 +1,6 @@
 import { Heart, Mail, MessageSquare } from "lucide-react";
 import DynamicCounter from "./DynamicCounter";
+import { StatsBar } from "./StatsBar";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -116,28 +117,20 @@ const Footer = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className="border-t border-gray-800 pt-8 mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <DynamicCounter className="text-2xl font-bold text-blue-400 mb-1" />
-              <div className="text-gray-400 text-sm">Inscrits en attente</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-blue-400 mb-1">50+</div>
-              <div className="text-gray-400 text-sm">
-                Communautés partenaires
-              </div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-blue-400 mb-1">12</div>
-              <div className="text-gray-400 text-sm">Dénominations</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-blue-400 mb-1">2025</div>
-              <div className="text-gray-400 text-sm">Année de lancement</div>
-            </div>
-          </div>
-        </div>
+
+        <StatsBar
+          showBorder
+          stats={[
+            {
+              value: <DynamicCounter className="text-blue-400" />,
+              label: "Inscrits en attente",
+            },
+            { value: "100%", label: "Sécurisé et sans vente de données" },
+            { value: "100%", label: "Taux de satisfaction" },
+            { value: "2025", label: "Année de lancement" },
+          ]}
+          className="text-blue-400"
+        />
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8">

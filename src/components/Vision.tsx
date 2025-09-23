@@ -77,21 +77,47 @@ const Vision = () => {
           })}
         </div>
 
-        {/* Personal Message */}
+        {/* Personal Message - Divine Calling */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 md:p-12 text-white mb-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              Pourquoi ConnectStar existe ?
-            </h3>
-            <p className="text-lg md:text-xl leading-relaxed mb-8 opacity-90">
-              En tant que développeur et croyant, j'ai constaté un manque : aucune messagerie ne répond vraiment 
-              aux besoins spécifiques de notre communauté chrétienne. ConnectStar naît de cette conviction que 
-              la technologie peut servir notre foi et renforcer nos liens fraternels.
-            </p>
-            <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3">
-              <p className="text-sm font-medium">
-                "Car là où deux ou trois sont rassemblés en mon nom, je suis au milieu d'eux." - Matthieu 18:20
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                Pourquoi ConnectStar existe ? Une Vision Divine
+              </h3>
+            </div>
+            
+            <div className="space-y-6 text-lg md:text-xl leading-relaxed opacity-95">
+              <p className="italic">
+                "En mars de cette année, Dieu m'a parlé avec clarté au sujet des risques que représentent 
+                les messageries actuelles qui vendent les données de Son peuple..."
               </p>
+              
+              <p>
+                <span className="font-semibold text-amber-300">"Mitch"</span>, m'a-t-Il dit, 
+                <span className="font-semibold">"Je veux que tu crées une application de messagerie sécurisée 
+                comme WhatsApp, mais pour Mon corps. Elle s'appellera ConnectStar."</span>
+              </p>
+              
+              <p>
+                Voici comment j'ai entrepris cette aventure sacrée. Cela fait des mois que je travaille 
+                sans rémunération, dans le seul but d'accomplir la parole de Dieu. Car les temps qui viennent 
+                révéleront bien plus que la simple vente de données.
+              </p>
+              
+              <p className="font-medium">
+                Si vous êtes comme moi et désirez voir le Corps du Christ grandir dans l'unité et la sécurité, 
+                rejoignez cette mission divine. Ensemble, unis dans la foi, nous pouvons contribuer à cette 
+                œuvre entièrement gratuite qui servira les générations futures de croyants.
+              </p>
+            </div>
+            
+            <div className="text-center mt-8">
+              <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-8 py-4">
+                <p className="text-lg font-medium italic">
+                  "Car là où deux ou trois sont rassemblés en mon nom, je suis au milieu d'eux."
+                </p>
+                <p className="text-sm mt-2 text-amber-300">- Matthieu 18:20</p>
+              </div>
             </div>
           </div>
         </div>
