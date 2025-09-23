@@ -109,8 +109,8 @@ const Footer = () => {
                 SUPPORT & COMMUNAUTÉ
               </h4>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Notre équipe est là pour vous accompagner dans votre découverte
-                de ConnectStar.
+                Je suis là pour vous accompagner dans votre découverte de
+                ConnectStar.
               </p>
             </div>
           </div>
