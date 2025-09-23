@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ArrowRight, Smartphone, Heart } from 'lucide-react';
+import DynamicCounter from './DynamicCounter';
+import { useBrevoContacts } from '../hooks/useBrevoContacts';
 
 const backgroundPatternUrl = "data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%234F46E5\" fill-opacity=\"0.4\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
 
 const Hero = () => {
+  const { data: contactsData } = useBrevoContacts();
+  
   const scrollToSignup = () => {
     const element = document.getElementById('signup');
     element?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const avatars = useMemo(() => {
+    const contacts = contactsData || [];
+    const colors = ["3b82f6", "8b5cf6", "10b981", "f59e0b", "ef4444"];
+
+    return contacts.slice(0, 4).map((contact, index) => {
+      const username = contact.email.split("@")[0];
+      const displayName = username.charAt(0).toUpperCase() + username.slice(1);
+
+      return {
+        email: contact.email,
+        displayName,
+        color: colors[index % colors.length],
+        src: `https://ui-avatars.com/api/?name=${encodeURIComponent(
+          displayName
+        )}&background=${
+          colors[index % colors.length]
+        }&color=fff&size=32&rounded=true`,
+      };
+    });
+  }, [contactsData]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-amber-50">
@@ -71,12 +96,31 @@ const Hero = () => {
 
           {/* Social Proof */}
           <div className="text-center text-gray-500">
-            <p className="text-sm mb-4">Déjà <span className="font-semibold text-blue-600">2,847</span> personnes inscrites</p>
+            <p className="text-sm mb-4">Déjà <DynamicCounter className="font-semibold text-blue-600" fallbackCount={2847} /> personnes inscrites</p>
             <div className="flex items-center justify-center space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <div key={i} className="w-8 h-8 bg-gray-300 rounded-full animate-pulse" style={{ animationDelay: `${i * 0.2}s` }}></div>
-              ))}
-              <span className="text-xs ml-2">+2847 autres...</span>
+              <div className="flex -space-x-2">
+                {avatars.length > 0 ? (
+                  avatars.map((avatar, index) => (
+                    <img
+                      key={index}
+                      src={avatar.src}
+                      alt={avatar.displayName}
+                      className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                      }}
+                    />
+                  ))
+                ) : (
+                  [...Array(4)].map((_, i) => (
+                    <div key={i} className="w-8 h-8 bg-gray-300 rounded-full animate-pulse" style={{ animationDelay: `${i * 0.2}s` }}></div>
+                  ))
+                )}
+                <div className="w-8 h-8 rounded-full border-2 border-white bg-gray-300 flex items-center justify-center">
+                  <span className="text-xs text-gray-600 font-medium">+∞</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
