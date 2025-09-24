@@ -2,54 +2,75 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 
 const FAQ = () => {
-  const [openItems, setOpenItems] = useState<number[]>([0]);
+  const [openItems, setOpenItems] = useState<string[]>([]);
 
-  const toggleItem = (index: number) => {
+  const toggleItem = (index: string) => {
     setOpenItems((prev) =>
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
 
-  const faqs = [
+  const categories = [
     {
-      question: "ConnectStar est-elle vraiment gratuite ?",
-      answer:
-        "Oui, ConnectStar sera entièrement gratuite pour tous les utilisateurs. Notre mission est de faciliter la communion fraternelle, pas de générer des profits sur la foi.",
+      title: "Vision Divine",
+      faqs: [
+        {
+          question: "Pourquoi Dieu vous a-t-il appelé à créer ConnectStar ?",
+          answer:
+            "Au début de l'année 2025, Dieu m'a parlé clairement sur WhatsApp qui vend les données de Son peuple. Il m'a dit : 'Mitch, je veux que tu développes une application pour les chrétiens.' ConnectStar est née de cette révélation divine pour protéger et unir le Corps du Christ.",
+        },
+        {
+          question: "Que signifie le nom 'ConnectStar' ?",
+          answer:
+            "Dieu m'a rappelé sa promesse à Abraham : 'regarde le ciel et compte les étoiles.' ConnectStar signifie : Connectés jusqu'aux extrémités du monde. C'est une vision divine d'unité mondiale des chrétiens.",
+        },
+      ],
     },
     {
-      question: "Quelles versions de la Bible seront disponibles ?",
-      answer:
-        "Nous intégrerons plusieurs traductions populaires : Louis Segond 1910, Semeur, Parole de Vie, TOB, et d'autres. Vous pourrez choisir votre version préférée dans les paramètres.",
+      title: "Application",
+      faqs: [
+        {
+          question: "ConnectStar est-elle vraiment gratuite ?",
+          answer:
+            "Oui, ConnectStar sera toujours entièrement gratuite pour tous les utilisateurs. Aucun abonnement, aucun frais caché. C'est une mission divine, pas commerciale.",
+        },
+        {
+          question: "Quelle est cette fonctionnalité surprise 🎁 ?",
+          answer:
+            "C'est une innovation révolutionnaire que j'ai développée spécialement pour ConnectStar ! Je ne peux pas encore la dévoiler, mais elle va transformer votre expérience spirituelle. Les premiers inscrits la découvriront en exclusivité.",
+        },
+        {
+          question: "Quand l'application sera-t-elle disponible ?",
+          answer:
+            "ConnectStar sera lancée en version bêta fin d'année 2025. Les membres de la liste d'attente auront un accès prioritaire et testeront toutes les fonctionnalités en avant-première.",
+        },
+        {
+          question: "L'application aura-t-elle des bugs en version bêta ?",
+          answer:
+            "Oui, comme toute application en développement. Contrairement à WhatsApp, je n'ai pas leur financement, mais avec votre aide et vos retours, nous perfectionnerons ConnectStar ensemble.",
+        },
+      ],
     },
     {
-      question: "Comment garantissez-vous la sécurité des conversations ?",
-      answer:
-        "ConnectStar utilise un chiffrement bout-à-bout pour toutes les communications, une authentification sécurisée via Supabase, et une modération bienveillante pour maintenir un environnement sain.",
-    },
-    {
-      question: "Sera-t-il possible de créer des groupes privés ?",
-      answer:
-        "Absolument ! Vous pourrez créer des groupes privés pour votre église, votre groupe de jeunes, vos études bibliques ou tout autre projet spirituel avec contrôle total sur les membres.",
-    },
-    {
-      question: "L'application fonctionne-t-elle hors ligne ?",
-      answer:
-        "Certaines fonctionnalités comme la lecture de la Bible seront accessibles hors ligne. Les messages seront synchronisés dès que vous retrouvez une connexion internet.",
-    },
-    {
-      question: "Quand l'application sera-t-elle disponible ?",
-      answer:
-        "Nous prévoyons un lancement en 2025. Les personnes inscrites sur notre liste d'attente seront les premières informées et auront accès à la version bêta.",
-    },
-    {
-      question: "ConnectStar est-elle liée à une dénomination particulière ?",
-      answer:
-        "Non, ConnectStar est interconfessionnelle. Nous accueillons tous les chrétiens, quelle que soit leur dénomination, dans le respect des différences théologiques.",
-    },
-    {
-      question: "Comment puis-je contribuer au développement ?",
-      answer:
-        "Inscrivez-vous à notre liste d'attente pour participer à la version bêta. Nous chercherons aussi des testeurs et des contributeurs pour améliorer l'application.",
+      title: "Soutien & Donations",
+      faqs: [
+        {
+          question:
+            "Comment puis-je soutenir le développement de ConnectStar ?",
+          answer:
+            "ConnectStar est développée sans rémunération par passion pour le Corps du Christ. Vous pouvez nous aider par vos prières, en partageant le projet, et bientôt par des donations volontaires pour couvrir les coûts serveurs et accélérer le développement.",
+        },
+        {
+          question: "Pourquoi avez-vous besoin de donations ?",
+          answer:
+            "Je développe ConnectStar gratuitement depuis des mois pour accomplir la parole de Dieu. Les donations aideront à payer les serveurs, améliorer l'infrastructure et permettre un développement plus rapide pour servir plus efficacement le Corps du Christ.",
+        },
+        {
+          question: "ConnectStar peut-elle vraiment remplacer WhatsApp ?",
+          answer:
+            "C'est la vision que Dieu m'a donnée ! Mon objectif à long terme est que tous les chrétiens qui connaissent et servent Jésus quittent WhatsApp pour se rassembler sur ConnectStar. Ensemble, nous pouvons y arriver.",
+        },
+      ],
     },
   ];
 
@@ -58,53 +79,71 @@ const FAQ = () => {
       id="faq"
       className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Questions fréquentes
           </h2>
-          <p className="text-xl text-gray-600">
-            Tout ce que vous devez savoir sur ConnectStar
+          <p className="text-lg md:text-xl text-gray-600">
+            Encore des questions ? Nous sommes là pour vous aider.
           </p>
         </div>
 
-        {/* FAQ Items */}
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
-            >
-              <button
-                onClick={() => toggleItem(index)}
-                className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                  {faq.question}
-                </h3>
-                {openItems.includes(index) ? (
-                  <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                )}
-              </button>
+        {/* Categories */}
+        <div className="space-y-10">
+          {categories.map((cat, catIndex) => (
+            <div key={catIndex}>
+              <h3 className="text-xl font-semibold text-blue-600 mb-6">
+                {cat.title}
+              </h3>
+              <div className="space-y-4">
+                {cat.faqs.map((faq, index) => {
+                  const globalIndex = `${catIndex}-${index}`;
+                  const isOpen = openItems.includes(globalIndex);
 
-              {openItems.includes(index) && (
-                <div className="px-8 pb-6">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </div>
-              )}
+                  return (
+                    <div
+                      key={globalIndex}
+                      className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+                    >
+                      <button
+                        onClick={() => toggleItem(globalIndex)}
+                        className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                      >
+                        <span className="text-lg font-medium text-gray-900 pr-4">
+                          {faq.question}
+                        </span>
+                        {isOpen ? (
+                          <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                        )}
+                      </button>
+
+                      {isOpen && (
+                        <div className="px-6 pb-5">
+                          <p className="text-gray-600 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Contact CTA */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">Une autre question ?</p>
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <p className="text-gray-600 mb-4">
+            Vous n’avez pas trouvé la réponse ?
+          </p>
           <a
             href="mailto:connectstart.contact@gmail.com"
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+            className="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-medium shadow hover:bg-blue-700 transition-colors"
           >
             Contactez-nous directement
           </a>
