@@ -143,8 +143,6 @@ const Footer = () => {
             <div className="flex items-center space-x-6 text-sm">
               <a
                 href="/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-1"
               >
                 <Info className="w-4 h-4" />
@@ -152,8 +150,6 @@ const Footer = () => {
               </a>
               <a
                 href="/terms"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-1"
               >
                 <Info className="w-4 h-4" />

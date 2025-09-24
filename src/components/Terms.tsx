@@ -1,10 +1,25 @@
 import React from 'react';
-import { FileText, Users, AlertTriangle, Gavel, Heart, Cross } from 'lucide-react';
+import { FileText, Users, AlertTriangle, Gavel, Heart, Cross, ArrowLeft } from 'lucide-react';
 
-const Terms = () => {
+interface TermsProps {
+  onBack?: () => void;
+}
+
+const Terms: React.FC<TermsProps> = ({ onBack }) => {
   return (
-    <section id="terms" className="py-20 bg-white">
+    <section className="min-h-screen py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Back Button */}
+        {onBack && (
+          <button
+            onClick={onBack}
+            className="flex items-center text-blue-600 hover:text-blue-700 mb-8 font-medium"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Retour à ConnectStar
+          </button>
+        )}
+
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -149,30 +164,11 @@ const Terms = () => {
             </div>
           </div>
 
-          {/* Modifications */}
-          <div className="bg-gray-50 rounded-xl p-6">
-            <div className="flex items-center mb-4">
-              <FileText className="w-6 h-6 text-indigo-600 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-900">7. Modifications des Conditions</h3>
-            </div>
-            <div className="space-y-3 text-gray-700">
-              <p>
-                Nous nous réservons le droit de modifier ces conditions pour améliorer ConnectStar :
-              </p>
-              <ul className="list-disc list-inside ml-4 space-y-2">
-                <li>Notification des changements majeurs par email</li>
-                <li>Période de grâce pour accepter les nouvelles conditions</li>
-                <li>Possibilité de supprimer votre compte si désaccord</li>
-                <li>Mise à jour transparente sur notre site web</li>
-              </ul>
-            </div>
-          </div>
-
           {/* Contact */}
           <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6">
             <div className="flex items-center mb-4">
               <Heart className="w-6 h-6 text-green-600 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-900">8. Contact et Support</h3>
+              <h3 className="text-xl font-semibold text-gray-900">7. Contact et Support</h3>
             </div>
             <div className="text-gray-700">
               <p>Pour toute question concernant ces conditions :</p>

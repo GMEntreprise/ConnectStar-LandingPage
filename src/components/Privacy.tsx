@@ -1,10 +1,25 @@
 import React from 'react';
-import { Shield, Lock, Eye, Database, UserCheck, Mail } from 'lucide-react';
+import { Shield, Lock, Eye, Database, UserCheck, Mail, ArrowLeft } from 'lucide-react';
 
-const Privacy = () => {
+interface PrivacyProps {
+  onBack?: () => void;
+}
+
+const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
   return (
-    <section id="privacy" className="py-20 bg-gray-50">
+    <section className="min-h-screen py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Back Button */}
+        {onBack && (
+          <button
+            onClick={onBack}
+            className="flex items-center text-blue-600 hover:text-blue-700 mb-8 font-medium"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Retour à ConnectStar
+          </button>
+        )}
+
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
