@@ -1,4 +1,4 @@
-import { Menu, MessageSquare, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -17,10 +17,9 @@ const Header = () => {
           {/* Logo + Brand */}
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-              <MessageSquare className="w-6 h-6 text-blue-600" />
               <img
                 className="ml-1 h-6"
-                src="/assets/connectStar-logo.png"
+                src="/src/assets/logo-connectStar.webp"
                 alt="ConnectStar"
               />
             </div>

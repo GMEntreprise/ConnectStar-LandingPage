@@ -1,12 +1,4 @@
-import {
-  BookOpen,
-  Heart,
-  Home,
-  Info,
-  Mail,
-  MessageSquare,
-  Users,
-} from "lucide-react";
+import { BookOpen, Heart, Home, Info, Mail, Users } from "lucide-react";
 import DynamicCounter from "./DynamicCounter";
 import { StatsBar } from "./StatsBar";
 
@@ -22,8 +14,10 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <MessageSquare className="w-6 h-6 text-blue-700" />
-                <img src="/assets/connectStar-logo.png" alt="ConnectStar" />
+                <img
+                  src="/src/assets/logo-connectStar.webp"
+                  alt="ConnectStar"
+                />
               </div>
               <span className="text-2xl font-bold">ConnectStar</span>
             </div>
