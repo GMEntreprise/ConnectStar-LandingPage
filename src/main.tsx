@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { Toaster } from "sonner";
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")!).render(
       <App />
       <Toaster position="bottom-center" richColors />
     </QueryClientProvider>
+    <SpeedInsights />
     <Analytics />
   </StrictMode>
 );
