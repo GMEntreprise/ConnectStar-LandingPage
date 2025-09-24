@@ -79,44 +79,70 @@ const Vision = () => {
 
         {/* Personal Message - Divine Calling */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 md:p-12 text-white mb-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
               <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                Pourquoi ConnectStar existe ? Une Vision Divine
+                Pourquoi ConnectStar existe ? Une Révélation Divine
               </h3>
             </div>
             
-            <div className="space-y-6 text-lg md:text-xl leading-relaxed opacity-95">
-              <p className="italic">
-                "En mars de cette année, Dieu m'a parlé avec clarté au sujet des risques que représentent 
-                les messageries actuelles qui vendent les données de Son peuple..."
+            <div className="space-y-6 text-base md:text-lg leading-relaxed opacity-95">
+              <p className="font-medium text-amber-200">
+                Au début de l'année 2025, Dieu m'a parlé sur WhatsApp.
               </p>
               
               <p>
-                <span className="font-semibold text-amber-300">"Mitch"</span>, m'a-t-Il dit, 
-                <span className="font-semibold">"Je veux que tu crées une application de messagerie sécurisée 
-                comme WhatsApp, mais pour Mon corps. Elle s'appellera ConnectStar."</span>
+                Il m'a dit : <span className="font-semibold italic">"Mitch, WhatsApp vend les données des gens. 
+                Et cela ne s'arrêtera pas là."</span>
               </p>
               
               <p>
-                Voici comment j'ai entrepris cette aventure sacrée. Cela fait des mois que je travaille 
-                sans rémunération, dans le seul but d'accomplir la parole de Dieu. Car les temps qui viennent 
-                révéleront bien plus que la simple vente de données.
+                Alors je lui ai demandé : <span className="italic">"Seigneur, que veux-tu que je fasse ?"</span><br/>
+                Il m'a répondu : <span className="font-semibold">"Je veux que tu développes une application comme WhatsApp, 
+                mais pour les chrétiens. Je veux que mon peuple arrête d'utiliser WhatsApp."</span>
+              </p>
+              
+              <p>
+                J'ai dit : <span className="italic">"D'accord Seigneur, donne-moi l'intelligence pour la créer."</span><br/>
+                Puis j'ai demandé : <span className="italic">"Seigneur, comment s'appellera l'application ?"</span><br/>
+                Il m'a répondu : <span className="font-semibold text-amber-300">"ConnectStar."</span>
+              </p>
+              
+              <p>
+                Surpris, j'ai demandé : <span className="italic">"Mais Seigneur, que signifie ConnectStar ?"</span><br/>
+                Il m'a rappelé : <span className="font-semibold">"Quand j'ai parlé à Abraham, je lui ai dit : 
+                regarde le ciel et compte les étoiles. Voilà ce que veut dire ConnectStar : 
+                Connectés jusqu'aux extrémités du monde."</span>
               </p>
               
               <p className="font-medium">
-                Si vous êtes comme moi et désirez voir le Corps du Christ grandir dans l'unité et la sécurité, 
-                rejoignez cette mission divine. Ensemble, unis dans la foi, nous pouvons contribuer à cette 
-                œuvre entièrement gratuite qui servira les générations futures de croyants.
+                Ainsi, Dieu m'a inspiré et guidé dans la création de cette application.
+                Mon objectif à long terme est que tous les chrétiens qui connaissent et servent Jésus 
+                quittent WhatsApp, pour se rassembler sur ConnectStar.
+              </p>
+              
+              <p>
+                Nous savons que dans les temps à venir, plus rien ne sera vraiment sécurisé. 
+                Si, comme moi, vous désirez changer les choses, rejoignez cette nouvelle aventure 
+                et contribuez à l'améliorer.
+              </p>
+              
+              <p className="text-sm opacity-90">
+                L'application sera en version bêta : certaines choses devront être perfectionnées, 
+                alors n'hésitez pas à me contacter pour partager vos suggestions.
               </p>
             </div>
             
-            <div className="text-center mt-8">
-              <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-8 py-4">
-                <p className="text-lg font-medium italic">
-                  "Car là où deux ou trois sont rassemblés en mon nom, je suis au milieu d'eux."
+            <div className="text-center mt-10">
+              <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-8 py-6">
+                <p className="text-lg font-medium italic mb-2">
+                  "Regarde vers le ciel, et compte les étoiles, si tu peux les compter"
                 </p>
-                <p className="text-sm mt-2 text-amber-300">- Matthieu 18:20</p>
+                <p className="text-sm text-amber-300">- Genèse 15:5</p>
+                <div className="mt-4 pt-4 border-t border-white/30">
+                  <p className="font-semibold text-base">Edouard GM</p>
+                  <p className="text-sm opacity-90">Fondateur de ConnectStar</p>
+                </div>
               </div>
             </div>
           </div>
