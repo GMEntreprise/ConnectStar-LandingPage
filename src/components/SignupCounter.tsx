@@ -7,12 +7,12 @@ const SignupCounter: React.FC = () => {
   const { data: contactsData } = useBrevoContacts();
 
   // Debug : afficher les données dans la console
-  console.log('SignupCounter Debug:', { 
-    countData, 
-    contactsData, 
+  console.log("SignupCounter Debug:", {
+    countData,
+    contactsData,
     contactsLength: contactsData?.length,
-    error, 
-    isLoading 
+    error,
+    isLoading,
   });
 
   const avatars = useMemo(() => {
@@ -51,7 +51,7 @@ const SignupCounter: React.FC = () => {
                 key={index}
                 className={`w-8 h-8 rounded-full border-2 border-white ${avatar.color} flex items-center justify-center text-white text-xs font-medium`}
               >
-                {avatar.initials}
+                {avatar.displayName}
               </div>
             ))}
             <div className="w-8 h-8 rounded-full border-2 border-white bg-gray-300 flex items-center justify-center">
@@ -64,15 +64,13 @@ const SignupCounter: React.FC = () => {
   }
 
   const count = countData?.count || 0;
-  const displayCount = isLoading ? '...' : count.toLocaleString('fr-FR');
+  const displayCount = isLoading ? "..." : count.toLocaleString("fr-FR");
 
   return (
     <div className="mt-8 text-center">
       <p className="text-sm text-gray-600 mb-3">
-        Rejoignez{' '}
-        <span className="font-semibold text-blue-600">
-          {displayCount}
-        </span>{' '}
+        Rejoignez{" "}
+        <span className="font-semibold text-blue-600">{displayCount}</span>{" "}
         autres personnes déjà inscrites
       </p>
       <div className="flex items-center justify-center space-x-2">
@@ -81,21 +79,21 @@ const SignupCounter: React.FC = () => {
             <img
               key={index}
               src={avatar.src}
-              alt={avatar.name}
+              alt={avatar.displayName}
               className="w-8 h-8 rounded-full border-2 border-white object-cover"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
+                target.style.display = "none";
                 const fallback = target.nextElementSibling as HTMLDivElement;
                 if (fallback) {
-                  fallback.style.display = 'flex';
+                  fallback.style.display = "flex";
                 }
               }}
             />
           ))}
           <div className="w-8 h-8 rounded-full border-2 border-white bg-gray-300 flex items-center justify-center">
             <span className="text-xs text-gray-600 font-medium">
-              {count > 999 ? '+1K' : `+${Math.max(0, count - 4)}`}
+              {count > 999 ? "+1K" : `+${Math.max(0, count - 4)}`}
             </span>
           </div>
         </div>

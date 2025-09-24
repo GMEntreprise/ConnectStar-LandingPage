@@ -73,8 +73,8 @@ async function brevoFetch<T>(
 
 export const brevoApi = {
   async addContact(email: string): Promise<BrevoContact> {
-    console.log('addContact appelé, BREVO_API_KEY:', !!BREVO_API_KEY);
-    
+    console.log("addContact appelé, BREVO_API_KEY:", !!BREVO_API_KEY);
+
     // Si pas de clé API configurée, simulation pour développement
     if (!BREVO_API_KEY) {
       await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -122,7 +122,9 @@ export const brevoApi = {
     });
 
     // Aussi sauvegarder localement pour les avatars
-    const savedEmails = JSON.parse(localStorage.getItem("brevo_emails") || "[]");
+    const savedEmails = JSON.parse(
+      localStorage.getItem("brevo_emails") || "[]"
+    );
     if (!savedEmails.includes(email)) {
       savedEmails.push(email);
       localStorage.setItem("brevo_emails", JSON.stringify(savedEmails));
@@ -137,34 +139,39 @@ export const brevoApi = {
   },
 
   async getContactCount(): Promise<BrevoContactCount> {
-    console.log('getContactCount appelé, BREVO_API_KEY:', !!BREVO_API_KEY, 'BREVO_LIST_ID:', BREVO_LIST_ID);
-    
+    console.log(
+      "getContactCount appelé, BREVO_API_KEY:",
+      !!BREVO_API_KEY,
+      "BREVO_LIST_ID:",
+      BREVO_LIST_ID
+    );
+
     // Si pas de clé API configurée, retourner 0 pour commencer
     if (!BREVO_API_KEY) {
       await new Promise((resolve) => setTimeout(resolve, 800));
       const savedCount = localStorage.getItem("brevo_subscriber_count");
-      console.log('Mode localStorage, savedCount:', savedCount);
+      console.log("Mode localStorage, savedCount:", savedCount);
       return { count: savedCount ? parseInt(savedCount, 10) : 0 };
     }
 
     // Récupérer le nombre de contacts dans la liste spécifique
-    console.log('Appel API Brevo pour compter les contacts...');
+    console.log("Appel API Brevo pour compter les contacts...");
     try {
-      const response = await brevoFetch<{ 
+      const response = await brevoFetch<{
         totalBlacklisted: number;
         totalSubscribers: number;
         uniqueSubscribers: number;
-      }>(
-        `/contacts/lists/${BREVO_LIST_ID}`
-      );
-      console.log('Réponse API count:', response);
-      return { count: response.totalSubscribers || response.uniqueSubscribers || 0 };
+      }>(`/contacts/lists/${BREVO_LIST_ID}`);
+      console.log("Réponse API count:", response);
+      return {
+        count: response.totalSubscribers || response.uniqueSubscribers || 0,
+      };
     } catch (error) {
-      console.error('Erreur API count:', error);
+      console.error("Erreur API count:", error);
       try {
-        const contactsResponse = await brevoFetch<{ contacts: Array<{ email: string }> }>(
-          `/contacts?listIds=${BREVO_LIST_ID}&limit=50`
-        );
+        const contactsResponse = await brevoFetch<{
+          contacts: Array<{ email: string }>;
+        }>(`/contacts?listIds=${BREVO_LIST_ID}&limit=50`);
         return { count: contactsResponse.contacts?.length || 0 };
       } catch {
         throw error;
@@ -173,12 +180,14 @@ export const brevoApi = {
   },
 
   async getRecentContacts(): Promise<BrevoContact[]> {
-    console.log('getRecentContacts appelé, BREVO_API_KEY:', !!BREVO_API_KEY);
-    
+    console.log("getRecentContacts appelé, BREVO_API_KEY:", !!BREVO_API_KEY);
+
     // Si pas de clé API configurée, utiliser localStorage
     if (!BREVO_API_KEY) {
-      const savedEmails = JSON.parse(localStorage.getItem("brevo_emails") || "[]");
-      console.log('Mode localStorage, savedEmails:', savedEmails);
+      const savedEmails = JSON.parse(
+        localStorage.getItem("brevo_emails") || "[]"
+      );
+      console.log("Mode localStorage, savedEmails:", savedEmails);
       return savedEmails.slice(0, 4).map((email: string) => ({
         email,
         createdAt: new Date().toISOString(),
@@ -188,21 +197,26 @@ export const brevoApi = {
     }
 
     // Récupérer les contacts récents de la liste Brevo
-    console.log('Appel API Brevo pour récupérer les contacts...');
+    console.log("Appel API Brevo pour récupérer les contacts...");
     try {
-      const response = await brevoFetch<{ contacts: Array<{ email: string; createdAt: string; modifiedAt: string; attributes: Record<string, string | number | boolean> }> }>(
-        `/contacts?listIds=${BREVO_LIST_ID}&limit=4&sort=desc`
-      );
-      
-      console.log('Réponse API contacts:', response);
-      return response.contacts.map(contact => ({
+      const response = await brevoFetch<{
+        contacts: Array<{
+          email: string;
+          createdAt: string;
+          modifiedAt: string;
+          attributes: Record<string, string | number | boolean>;
+        }>;
+      }>(`/contacts?listIds=${BREVO_LIST_ID}&limit=4&sort=desc`);
+
+      console.log("Réponse API contacts:", response);
+      return response.contacts.map((contact) => ({
         email: contact.email,
         createdAt: contact.createdAt,
         modifiedAt: contact.modifiedAt,
         attributes: contact.attributes,
       }));
     } catch (error) {
-      console.error('Erreur lors de la récupération des contacts:', error);
+      console.error("Erreur lors de la récupération des contacts:", error);
       return [];
     }
   },
@@ -224,19 +238,31 @@ export const brevoApi = {
         to: [{ email }],
         subject: "Bienvenue dans l'aventure ConnectStar ! 🎉",
         htmlContent: `
-          <h1>Merci pour votre inscription !</h1>
-          <p>Vous êtes maintenant dans notre liste d'attente pour ConnectStar, la révolution de la messagerie chrétienne.</p>
-          <p><strong>Ce qui vous attend :</strong></p>
-          <ul>
-            <li>Accès prioritaire à la version bêta</li>
-            <li>Fonctionnalités exclusives</li>
-            <li>Badge "Founding Member"</li>
-          </ul>
-          <p>Nous vous tiendrons informé(e) des prochaines étapes.</p>
-          <p>Que Dieu vous bénisse ! 🙏</p>
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <h1 style="color: #2563eb;">Merci pour votre inscription ! 🎉</h1>
+            <p>Vous êtes maintenant dans notre liste d'attente pour ConnectStar, la révolution de la messagerie chrétienne.</p>
+            
+            <div style="background-color: #fef3c7; padding: 15px; border-radius: 8px; margin: 20px 0;">
+              <h3 style="color: #d97706; margin: 0 0 10px 0;">📧 Important - Vérifiez vos spams !</h3>
+              <p style="margin: 0; color: #92400e;">
+                Ce message peut parfois arriver dans votre dossier spam ou courrier indésirable. 
+                Pensez à ajouter <strong>connectstart.contact@gmail.com</strong> à vos contacts 
+                pour recevoir toutes nos communications.
+              </p>
+            </div>
+            
+            <p><strong>Ce qui vous attend :</strong></p>
+            <ul>
+              <li>Accès prioritaire à la version bêta</li>
+              <li>Fonctionnalités exclusives</li>
+              <li>Badge "Founding Member"</li>
+            </ul>
+            <p>Nous vous tiendrons informé(e) des prochaines étapes de cette aventure divine.</p>
+            <p style="color: #2563eb;"><strong>Que Dieu vous bénisse ! 🙏</strong></p>
+          </div>
         `,
         tags: ["welcome", "landing-page"],
       }),
     });
-  }
+  },
 };

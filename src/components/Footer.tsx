@@ -1,4 +1,12 @@
-import { Heart, Mail, MessageSquare } from "lucide-react";
+import {
+  BookOpen,
+  Heart,
+  Home,
+  Info,
+  Mail,
+  MessageSquare,
+  Users,
+} from "lucide-react";
 import DynamicCounter from "./DynamicCounter";
 import { StatsBar } from "./StatsBar";
 
@@ -13,13 +21,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <MessageSquare className="w-20 h-20 text-white" />
-                <img
-                  className=""
-                  src="/assets/connectStar-logo.png"
-                  alt="ConnectStar"
-                />
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                <MessageSquare className="w-6 h-6 text-blue-700" />
+                <img src="/assets/connectStar-logo.png" alt="ConnectStar" />
               </div>
               <span className="text-2xl font-bold">ConnectStar</span>
             </div>
@@ -35,7 +39,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links / Navigation */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-3">
@@ -46,9 +50,10 @@ const Footer = () => {
                       .getElementById("features")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  Fonctionnalités
+                  <Home className="w-4 h-4" />
+                  <span>Fonctionnalités</span>
                 </button>
               </li>
               <li>
@@ -58,9 +63,10 @@ const Footer = () => {
                       .getElementById("vision")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  Ma Vision
+                  <BookOpen className="w-4 h-4" />
+                  <span>Ma Vision</span>
                 </button>
               </li>
               <li>
@@ -70,9 +76,10 @@ const Footer = () => {
                       .getElementById("faq")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  FAQ
+                  <Info className="w-4 h-4" />
+                  <span>FAQ</span>
                 </button>
               </li>
               <li>
@@ -82,9 +89,10 @@ const Footer = () => {
                       .getElementById("signup")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  Inscription
+                  <Users className="w-4 h-4" />
+                  <span>Inscription</span>
                 </button>
               </li>
             </ul>
@@ -93,17 +101,17 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-gray-400" />
-                <a
-                  href="mailto:connectstart.contact@gmail.com"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  connectstart.contact@gmail.com
-                </a>
-              </div>
+
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4 text-gray-400 " />
+              <a
+                href="mailto:connectstart.contact@gmail.com"
+                className="flex items-center  text-gray-300 hover:text-purple-600 transition-colors duration-200"
+              >
+                connectstart.contact@gmail.com
+              </a>
             </div>
+
             <div className="mt-6">
               <h4 className="text-sm font-semibold text-gray-400 mb-3">
                 SUPPORT & COMMUNAUTÉ
@@ -117,7 +125,6 @@ const Footer = () => {
         </div>
 
         {/* Stats Bar */}
-
         <StatsBar
           showBorder
           stats={[
@@ -142,15 +149,17 @@ const Footer = () => {
             <div className="flex items-center space-x-6 text-sm">
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-1"
               >
-                Politique de confidentialité
+                <Info className="w-4 h-4" />
+                <span>Politique de confidentialité</span>
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-1"
               >
-                Conditions d'utilisation
+                <Info className="w-4 h-4" />
+                <span>Conditions d'utilisation</span>
               </a>
             </div>
           </div>

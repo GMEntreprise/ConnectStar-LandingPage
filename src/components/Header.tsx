@@ -12,13 +12,14 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex items-center justify-between h-16">
+          {/* Logo + Brand */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8  rounded-lg flex items-center justify-center">
-              <MessageSquare className="w-20 h-20 text-white" />
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              <MessageSquare className="w-6 h-6 text-blue-600" />
               <img
-                className=""
+                className="ml-1 h-6"
                 src="/assets/connectStar-logo.png"
                 alt="ConnectStar"
               />
@@ -27,7 +28,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("features")}
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
@@ -54,10 +55,10 @@ const Header = () => {
             </button>
           </nav>
 
-          {/* Mobile menu button */}
+          {/* Mobile/Tablet Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
           >
             {isMenuOpen ? (
               <X className="w-6 h-6" />
@@ -67,30 +68,30 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile/Tablet Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-100 py-4 space-y-4">
+          <div className="lg:hidden absolute top-16 left-0 right-0 bg-white border-t border-gray-100 py-4 space-y-4 shadow-md">
             <button
               onClick={() => scrollToSection("features")}
-              className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2"
+              className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4"
             >
               Fonctionnalités
             </button>
             <button
               onClick={() => scrollToSection("vision")}
-              className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2"
+              className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4"
             >
               Ma Vision
             </button>
             <button
               onClick={() => scrollToSection("faq")}
-              className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2"
+              className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4"
             >
               FAQ
             </button>
             <button
               onClick={() => scrollToSection("signup")}
-              className="block w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md mt-4"
+              className="block w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md mt-4 mx-4"
             >
               Rejoindre la liste
             </button>
