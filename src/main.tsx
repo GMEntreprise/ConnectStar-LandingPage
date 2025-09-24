@@ -1,10 +1,10 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Analytics } from "@vercel/analytics/next";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { Toaster } from "sonner";
 import App from "./App.tsx";
 import "./index.css";
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -20,5 +20,6 @@ createRoot(document.getElementById("root")!).render(
       <App />
       <Toaster position="bottom-center" richColors />
     </QueryClientProvider>
+    <Analytics />
   </StrictMode>
 );
