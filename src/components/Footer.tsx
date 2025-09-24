@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <img
-                  src="/src/assets/logo-connectStar.webp"
+                  src="/public/assets/logo-connectStar.webp"
                   alt="ConnectStar"
                 />
               </div>
@@ -142,14 +142,18 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-6 text-sm">
               <a
-                href="#"
+                href="/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-1"
               >
                 <Info className="w-4 h-4" />
                 <span>Politique de confidentialité</span>
               </a>
               <a
-                href="#"
+                href="/terms"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-1"
               >
                 <Info className="w-4 h-4" />
