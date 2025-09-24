@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, MessageSquare, Users, Shield, Heart, Zap } from 'lucide-react';
+import { BookOpen, MessageSquare, Gift, Shield, Heart, Download } from 'lucide-react';
 
 const Features = () => {
   const features = [
@@ -16,9 +16,9 @@ const Features = () => {
       highlight: false
     },
     {
-      icon: Users,
-      title: "Communautés de Foi",
-      description: "Rejoignez ou créez des groupes centrés sur la prière, l'étude biblique, et les projets spirituels partagés.",
+      icon: Gift,
+      title: "Fonctionnalité Surprise 🎁",
+      description: "Une innovation révolutionnaire développée spécialement pour ConnectStar que nous dévoilerons bientôt. Préparez-vous à être émerveillés !",
       highlight: false
     },
     {
@@ -34,9 +34,9 @@ const Features = () => {
       highlight: false
     },
     {
-      icon: Zap,
-      title: "Performance Native",
-      description: "Application native ultra-rapide développée avec React Native pour une expérience fluide sur iOS et Android.",
+      icon: Download,
+      title: "Accès Hors Ligne",
+      description: "Consultez vos conversations et la Bible même sans connexion internet. Idéal pour les temps de méditation et de retraite.",
       highlight: false
     }
   ];

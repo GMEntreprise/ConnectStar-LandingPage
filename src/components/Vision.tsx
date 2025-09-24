@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Users, BookOpen, Star, Globe, Lightbulb } from 'lucide-react';
+import { Heart, Users, BookOpen, Star, Shield, Lightbulb } from 'lucide-react';
 
 const Vision = () => {
   const visionPoints = [
@@ -22,9 +22,9 @@ const Vision = () => {
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: Globe,
-      title: "Unir l'Église universelle",
-      description: "Rassembler tous les chrétiens dans une plateforme commune qui célèbre notre diversité dans l'unité.",
+      icon: Shield,
+      title: "Protéger nos données spirituelles",
+      description: "Garantir la confidentialité et la sécurité de nos échanges spirituels, loin des algorithmes commerciaux et de la surveillance.",
       color: "from-purple-500 to-violet-500"
     }
   ];
