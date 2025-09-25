@@ -14,8 +14,6 @@ const DynamicCounter: React.FC<DynamicCounterProps> = ({
 
   const count = countData?.count || 0;
 
-  // Debug : afficher les données dans la console
-  console.log("DynamicCounter Debug:", { countData, count, error, isLoading });
 
   // Si erreur ou pas de données réelles, utiliser le fallback
   const displayCount = error || count === 0 ? fallbackCount : count;

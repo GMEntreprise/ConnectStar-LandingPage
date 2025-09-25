@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Cross, Smartphone, DollarSign, HelpCircle } from "lucide-react";
 import { useState } from "react";
 
 const FAQ = () => {
@@ -13,6 +13,8 @@ const FAQ = () => {
   const categories = [
     {
       title: "Vision Divine",
+      icon: Cross,
+      color: "text-blue-600",
       faqs: [
         {
           question: "Pourquoi Dieu vous a-t-il appelé à créer ConnectStar ?",
@@ -28,6 +30,8 @@ const FAQ = () => {
     },
     {
       title: "Application",
+      icon: Smartphone,
+      color: "text-green-600",
       faqs: [
         {
           question: "ConnectStar est-elle vraiment gratuite ?",
@@ -53,6 +57,8 @@ const FAQ = () => {
     },
     {
       title: "Soutien & Donations",
+      icon: DollarSign,
+      color: "text-purple-600",
       faqs: [
         {
           question:
@@ -82,6 +88,11 @@ const FAQ = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
+              <HelpCircle className="w-8 h-8 text-white" />
+            </div>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Questions fréquentes
           </h2>
@@ -92,11 +103,18 @@ const FAQ = () => {
 
         {/* Categories */}
         <div className="space-y-10">
-          {categories.map((cat, catIndex) => (
+          {categories.map((cat, catIndex) => {
+            const CategoryIcon = cat.icon;
+            return (
             <div key={catIndex}>
-              <h3 className="text-xl font-semibold text-blue-600 mb-6">
-                {cat.title}
-              </h3>
+              <div className="flex items-center mb-6">
+                <div className={`w-8 h-8 rounded-lg ${cat.color} bg-opacity-10 flex items-center justify-center mr-3`}>
+                  <CategoryIcon className={`w-5 h-5 ${cat.color}`} />
+                </div>
+                <h3 className={`text-xl font-semibold ${cat.color}`}>
+                  {cat.title}
+                </h3>
+              </div>
               <div className="space-y-4">
                 {cat.faqs.map((faq, index) => {
                   const globalIndex = `${catIndex}-${index}`;
@@ -133,7 +151,7 @@ const FAQ = () => {
                 })}
               </div>
             </div>
-          ))}
+          )})}
         </div>
 
         {/* CTA */}

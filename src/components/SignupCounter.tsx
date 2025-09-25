@@ -6,14 +6,6 @@ const SignupCounter: React.FC = () => {
   const { data: countData, isLoading, error } = useBevoCount();
   const { data: contactsData } = useBrevoContacts();
 
-  // Debug : afficher les données dans la console
-  console.log("SignupCounter Debug:", {
-    countData,
-    contactsData,
-    contactsLength: contactsData?.length,
-    error,
-    isLoading,
-  });
 
   const avatars = useMemo(() => {
     // Utiliser les vrais contacts Brevo si disponibles

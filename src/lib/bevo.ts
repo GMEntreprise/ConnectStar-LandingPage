@@ -73,7 +73,6 @@ async function brevoFetch<T>(
 
 export const brevoApi = {
   async addContact(email: string): Promise<BrevoContact> {
-    console.log("addContact appelé, BREVO_API_KEY:", !!BREVO_API_KEY);
 
     // Si pas de clé API configurée, simulation pour développement
     if (!BREVO_API_KEY) {
@@ -139,30 +138,21 @@ export const brevoApi = {
   },
 
   async getContactCount(): Promise<BrevoContactCount> {
-    console.log(
-      "getContactCount appelé, BREVO_API_KEY:",
-      !!BREVO_API_KEY,
-      "BREVO_LIST_ID:",
-      BREVO_LIST_ID
-    );
 
     // Si pas de clé API configurée, retourner 0 pour commencer
     if (!BREVO_API_KEY) {
       await new Promise((resolve) => setTimeout(resolve, 800));
       const savedCount = localStorage.getItem("brevo_subscriber_count");
-      console.log("Mode localStorage, savedCount:", savedCount);
       return { count: savedCount ? parseInt(savedCount, 10) : 0 };
     }
 
     // Récupérer le nombre de contacts dans la liste spécifique
-    console.log("Appel API Brevo pour compter les contacts...");
     try {
       const response = await brevoFetch<{
         totalBlacklisted: number;
         totalSubscribers: number;
         uniqueSubscribers: number;
       }>(`/contacts/lists/${BREVO_LIST_ID}`);
-      console.log("Réponse API count:", response);
       return {
         count: response.totalSubscribers || response.uniqueSubscribers || 0,
       };
@@ -180,14 +170,12 @@ export const brevoApi = {
   },
 
   async getRecentContacts(): Promise<BrevoContact[]> {
-    console.log("getRecentContacts appelé, BREVO_API_KEY:", !!BREVO_API_KEY);
 
     // Si pas de clé API configurée, utiliser localStorage
     if (!BREVO_API_KEY) {
       const savedEmails = JSON.parse(
         localStorage.getItem("brevo_emails") || "[]"
       );
-      console.log("Mode localStorage, savedEmails:", savedEmails);
       return savedEmails.slice(0, 4).map((email: string) => ({
         email,
         createdAt: new Date().toISOString(),
@@ -197,7 +185,6 @@ export const brevoApi = {
     }
 
     // Récupérer les contacts récents de la liste Brevo
-    console.log("Appel API Brevo pour récupérer les contacts...");
     try {
       const response = await brevoFetch<{
         contacts: Array<{
@@ -208,7 +195,6 @@ export const brevoApi = {
         }>;
       }>(`/contacts?listIds=${BREVO_LIST_ID}&limit=4&sort=desc`);
 
-      console.log("Réponse API contacts:", response);
       return response.contacts.map((contact) => ({
         email: contact.email,
         createdAt: contact.createdAt,
@@ -223,7 +209,6 @@ export const brevoApi = {
 
   async sendWelcomeEmail(email: string): Promise<void> {
     if (!BREVO_API_KEY) {
-      console.log("Email de bienvenue simulé pour:", email);
       return;
     }
 
