@@ -1,4 +1,12 @@
-import { ChevronDown, ChevronUp, Cross, Smartphone, DollarSign, HelpCircle } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronUp,
+  Cross,
+  DollarSign,
+  HelpCircle,
+  Mail,
+  Smartphone,
+} from "lucide-react";
 import { useState } from "react";
 
 const FAQ = () => {
@@ -106,52 +114,55 @@ const FAQ = () => {
           {categories.map((cat, catIndex) => {
             const CategoryIcon = cat.icon;
             return (
-            <div key={catIndex}>
-              <div className="flex items-center mb-6">
-                <div className={`w-8 h-8 rounded-lg ${cat.color} bg-opacity-10 flex items-center justify-center mr-3`}>
-                  <CategoryIcon className={`w-5 h-5 ${cat.color}`} />
+              <div key={catIndex}>
+                <div className="flex items-center mb-6">
+                  <div
+                    className={`w-8 h-8 rounded-lg ${cat.color} bg-opacity-10 flex items-center justify-center mr-3`}
+                  >
+                    <CategoryIcon className={`w-5 h-5 ${cat.color}`} />
+                  </div>
+                  <h3 className={`text-xl font-semibold ${cat.color}`}>
+                    {cat.title}
+                  </h3>
                 </div>
-                <h3 className={`text-xl font-semibold ${cat.color}`}>
-                  {cat.title}
-                </h3>
-              </div>
-              <div className="space-y-4">
-                {cat.faqs.map((faq, index) => {
-                  const globalIndex = `${catIndex}-${index}`;
-                  const isOpen = openItems.includes(globalIndex);
+                <div className="space-y-4">
+                  {cat.faqs.map((faq, index) => {
+                    const globalIndex = `${catIndex}-${index}`;
+                    const isOpen = openItems.includes(globalIndex);
 
-                  return (
-                    <div
-                      key={globalIndex}
-                      className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
-                    >
-                      <button
-                        onClick={() => toggleItem(globalIndex)}
-                        className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                    return (
+                      <div
+                        key={globalIndex}
+                        className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
                       >
-                        <span className="text-lg font-medium text-gray-900 pr-4">
-                          {faq.question}
-                        </span>
-                        {isOpen ? (
-                          <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                        )}
-                      </button>
+                        <button
+                          onClick={() => toggleItem(globalIndex)}
+                          className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                        >
+                          <span className="text-lg font-medium text-gray-900 pr-4">
+                            {faq.question}
+                          </span>
+                          {isOpen ? (
+                            <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                          ) : (
+                            <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                          )}
+                        </button>
 
-                      {isOpen && (
-                        <div className="px-6 pb-5">
-                          <p className="text-gray-600 leading-relaxed">
-                            {faq.answer}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+                        {isOpen && (
+                          <div className="px-6 pb-5">
+                            <p className="text-gray-600 leading-relaxed">
+                              {faq.answer}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          )})}
+            );
+          })}
         </div>
 
         {/* CTA */}
@@ -163,7 +174,8 @@ const FAQ = () => {
             href="mailto:connectstart.contact@gmail.com"
             className="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-medium shadow hover:bg-blue-700 transition-colors"
           >
-            Contactez-nous directement
+            <Mail className="w-5 h-5 mr-2" />
+            Contactez-moi directement
           </a>
         </div>
       </div>
