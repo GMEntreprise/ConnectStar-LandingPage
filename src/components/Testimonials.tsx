@@ -5,31 +5,27 @@ import { StatsBar } from "./StatsBar";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Marie D.",
-      role: "Responsable de groupe de jeunes",
-      content:
-        "Enfin une messagerie qui correspond à nos valeurs ! J'ai hâte de pouvoir organiser nos études bibliques plus facilement.",
-      rating: 5,
-      image:
-        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-    },
-    {
-      name: "Pasteur Jean-Luc M.",
-      role: "Église évangélique de Lyon",
-      content:
-        "Le concept de Bible intégrée est révolutionnaire. Cela va transformer la façon dont nous échangeons sur la Parole.",
-      rating: 5,
-      image:
-        "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-    },
-    {
-      name: "Sarah K.",
-      role: "Étudiante en théologie",
+      name: "Cyril Cerdan",
+      role: "Pasteur Principal et Missionnaire de l'assemblée connectée",
       content:
         "Une app qui allie technologie moderne et spiritualité, c'est exactement ce dont notre génération a besoin !",
       rating: 5,
-      image:
-        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+      color: "10b981",
+    },
+    {
+      name: "Marie Edouard",
+      role: "Médecin Généraliste",
+      content:
+        "Enfin une messagerie qui correspond à nos valeurs ! J'ai hâte de pouvoir organiser nos études bibliques plus facilement.",
+      rating: 5,
+      color: "3b82f6",
+    },
+    {
+      name: "Richard Garbin",
+      role: "Président de l'assemblée connectée",
+      content: `ConnectStar, enfin une application chrétienne de messages et d'appels. Elle sera équipée d'outils destinés aux chrétiens et, surtout, elle promet de ne pas partager les informations personnelles. Aucune de ses concurrentes, même les plus célèbres, ne propose cela. Je suis vraiment emballé à l'idée de découvrir tout cela.`,
+      rating: 5,
+      color: "8b5cf6",
     },
   ];
 
@@ -74,11 +70,17 @@ const Testimonials = () => {
 
               {/* Author */}
               <div className="flex items-center space-x-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
+                <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                  <img
+                    src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
+                      testimonial.name
+                    )}&background=${
+                      testimonial.color
+                    }&color=fff&size=48&rounded=true`}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full"
+                  />
+                </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">
                     {testimonial.name}
