@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle, Gift } from 'lucide-react';
+import { CheckCircle, Gift, Mail } from 'lucide-react';
 import EmailForm from './EmailForm';
 import SignupCounter from './SignupCounter';
 
@@ -23,9 +23,21 @@ const Signup = () => {
               Bienvenue dans l'aventure ConnectStar ! 🎉
             </h2>
             
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-6">
               Votre inscription a été confirmée. Vous recevrez un email de bienvenue dans quelques minutes avec tous les détails sur le lancement.
             </p>
+
+            <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 mb-8">
+              <div className="flex items-center justify-center mb-3">
+                <Mail className="w-5 h-5 text-yellow-600 mr-2" />
+                <h3 className="text-yellow-800 font-semibold">📧 Important - Vérifiez vos spams !</h3>
+              </div>
+              <p className="text-sm text-yellow-700 text-center">
+                Ce message peut parfois arriver dans votre dossier spam ou courrier indésirable. 
+                Pensez à ajouter <strong>connectstart.contact@gmail.com</strong> à vos contacts 
+                pour recevoir toutes nos communications.
+              </p>
+            </div>
 
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border-2 border-blue-100">
               <div className="flex items-center justify-center space-x-2 mb-3">
