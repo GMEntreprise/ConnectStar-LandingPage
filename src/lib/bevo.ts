@@ -240,7 +240,7 @@ export const brevoApi = {
             <ul>
               <li>Accès prioritaire à la version bêta</li>
               <li>Fonctionnalités exclusives</li>
-              <li>Badge "Founding Member"</li>
+              <li>Fonctionnalité surprise 🎁</li>
             </ul>
             <p>Nous vous tiendrons informé(e) des prochaines étapes de cette aventure divine.</p>
             <p style="color: #2563eb;"><strong>Que Dieu vous bénisse ! 🙏</strong></p>

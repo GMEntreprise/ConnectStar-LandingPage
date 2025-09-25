@@ -84,7 +84,7 @@ const Signup = () => {
             </div>
             <div className="flex items-center space-x-3 text-gray-700">
               <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-              <span className="text-sm">Badge "Founding Member"</span>
+              <span className="text-sm">Fonctionnalité surprise 🎁</span>
             </div>
           </div>
 
