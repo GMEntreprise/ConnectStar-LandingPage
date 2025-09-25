@@ -1,7 +1,7 @@
 import { BookOpen, Heart, Home, Info, Mail, Users } from "lucide-react";
+import logo from "../assets/logo-connectStar.webp";
 import DynamicCounter from "./DynamicCounter";
 import { StatsBar } from "./StatsBar";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <img src="/assets/logo-connectStar.webp" alt="ConnectStar" />
+                <img src={logo} alt="ConnectStar" />
               </div>
               <span className="text-2xl font-bold">ConnectStar</span>
             </div>

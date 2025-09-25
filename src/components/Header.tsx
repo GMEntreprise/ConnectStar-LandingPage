@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
+import logo from "../assets/logo-connectStar.webp";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,11 +17,7 @@ const Header = () => {
           {/* Logo + Brand */}
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-              <img
-                className="ml-1 h-6"
-                src="/assets/logo-connectStar.webp"
-                alt="ConnectStar"
-              />
+              <img className="ml-1 h-6" src={logo} alt="ConnectStar" />
             </div>
             <span className="text-xl font-bold text-gray-900">ConnectStar</span>
           </div>
