@@ -15,8 +15,10 @@ const Testimonials = () => {
     {
       name: "Marie Edouard",
       role: "Médecin Généraliste",
-      content:
-        "Enfin une messagerie qui correspond à nos valeurs ! J'ai hâte de pouvoir organiser nos études bibliques plus facilement.",
+      content: `ConnectStar est une réelle révolution !
+Une innovation prometteuse pour réunir et rassembler des millions de chrétiens.
+ConnectStar s'avère prometteuse pour élargir le réseau sur la toile entre chrétiens.
+À découvrir sans réserve !`,
       rating: 5,
       color: "3b82f6",
     },
@@ -48,7 +50,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-blue-100"
+              className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-blue-100 min-h-[400px] flex flex-col"
             >
               {/* Quote Icon */}
               <div className="flex items-center justify-between mb-6">
@@ -64,13 +66,13 @@ const Testimonials = () => {
               </div>
 
               {/* Content */}
-              <p className="text-gray-700 mb-6 leading-relaxed italic">
+              <p className="text-gray-700 mb-6 leading-relaxed italic flex-grow">
                 "{testimonial.content}"
               </p>
 
               {/* Author */}
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center">
+              <div className="flex items-center space-x-4 mt-auto">
+                <div className="rounded-full flex items-center justify-center">
                   <img
                     src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
                       testimonial.name
