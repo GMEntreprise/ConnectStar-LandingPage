@@ -19,7 +19,7 @@ const Header = () => {
             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
               <img
                 className="ml-1 h-6"
-                src="/public/assets/logo-connectStar.webp"
+                src="/assets/logo-connectStar.webp"
                 alt="ConnectStar"
               />
             </div>
