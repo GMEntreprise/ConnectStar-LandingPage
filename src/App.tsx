@@ -9,6 +9,7 @@ import Signup from './components/Signup';
 import Footer from './components/Footer';
 import Privacy from './components/Privacy';
 import Terms from './components/Terms';
+import NotFound from './components/NotFound';
 
 const HomePage = () => (
   <>
@@ -35,6 +36,10 @@ function App() {
           <Route 
             path="/terms" 
             element={<Terms onBack={() => window.history.back()} />} 
+          />
+          <Route 
+            path="*" 
+            element={<NotFound onBack={() => window.history.back()} />} 
           />
         </Routes>
       </main>
