@@ -84,12 +84,14 @@ const Header = () => {
             >
               FAQ
             </button>
-            <button
-              onClick={() => scrollToSection("signup")}
-              className="block w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md mt-4 mx-4"
-            >
-              Rejoindre la liste
-            </button>
+            <div className="px-4 mt-4">
+              <button
+                onClick={() => scrollToSection("signup")}
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md text-center"
+              >
+                Rejoindre la liste
+              </button>
+            </div>
           </div>
         )}
       </div>
