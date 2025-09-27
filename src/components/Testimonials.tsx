@@ -29,6 +29,13 @@ ConnectStar s'avère prometteuse pour élargir le réseau sur la toile entre chr
       rating: 5,
       color: "3b82f6",
     },
+    {
+      name: "Thaïs Casmmas",
+      role: "Leader de louange",
+      content: ``,
+      rating: 5,
+      color: "3b82f6",
+    },
   ];
 
   return (
