@@ -5,10 +5,17 @@ import { StatsBar } from "./StatsBar";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Cyril Cerdan",
-      role: "Pasteur Principal et Missionnaire de l'assemblée connectée",
+      name: "Richard Garbin",
+      role: "Président de l'assemblée connectée",
+      content: `ConnectStar, enfin une application chrétienne de messages et d'appels. Elle sera équipée d'outils destinés aux chrétiens et, surtout, elle promet de ne pas partager les informations personnelles. Aucune de ses concurrentes, même les plus célèbres, ne propose cela. Je suis vraiment emballé à l'idée de découvrir tout cela.`,
+      rating: 5,
+      color: "8b5cf6",
+    },
+    {
+      name: "Armand Kaczmarek",
+      role: "Chef d'entreprise",
       content:
-        "Une app qui allie technologie moderne et spiritualité, c'est exactement ce dont notre génération a besoin !",
+        "Je trouve le concept ConnectStar particulièrement nécessaire et judicieux pour les Chretiens. Notamment pour l’aspect confidentialité de nos données dans les temps qui arrivent. Bravo.",
       rating: 5,
       color: "10b981",
     },
@@ -21,13 +28,6 @@ ConnectStar s'avère prometteuse pour élargir le réseau sur la toile entre chr
 À découvrir sans réserve !`,
       rating: 5,
       color: "3b82f6",
-    },
-    {
-      name: "Richard Garbin",
-      role: "Président de l'assemblée connectée",
-      content: `ConnectStar, enfin une application chrétienne de messages et d'appels. Elle sera équipée d'outils destinés aux chrétiens et, surtout, elle promet de ne pas partager les informations personnelles. Aucune de ses concurrentes, même les plus célèbres, ne propose cela. Je suis vraiment emballé à l'idée de découvrir tout cela.`,
-      rating: 5,
-      color: "8b5cf6",
     },
   ];
 
