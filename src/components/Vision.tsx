@@ -107,7 +107,7 @@ const Vision = () => {
 
             <div className="space-y-6 text-base md:text-lg leading-relaxed opacity-95">
               <p className="font-medium text-amber-200">
-                Au début de l'année 2025, Dieu m'a parlé sur WhatsApp.
+                En fin d'année 2024, Dieu m'a parlé sur WhatsApp.
               </p>
 
               <p>
