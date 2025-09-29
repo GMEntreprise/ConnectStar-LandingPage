@@ -29,6 +29,14 @@ ConnectStar s'avère prometteuse pour élargir le réseau sur la toile entre chr
       rating: 5,
       color: "3b82f6",
     },
+    {
+      name: "Emmanuel & Emmanuel  Arson",
+      role: "Conducteur de louange",
+      content: `Application chrétienne vraiment passionnante !!!
+Un projet qui vient du cœur de Dieu et qui unifie l'Eglise !!! Je vous encourage a participer a ce nouveau concept !`,
+      rating: 5,
+      color: "3b82f6",
+    },
     // {
     //   name: "Thaïs Casmmas",
     //   role: "Leader de louange",
