@@ -30,10 +30,17 @@ ConnectStar s'avère prometteuse pour élargir le réseau sur la toile entre chr
       color: "3b82f6",
     },
     {
-      name: "Emmanuel & Sandrine  Arson",
+      name: "Sandrine  Arson",
       role: "Conducteur de louange",
       content: `Application chrétienne vraiment passionnante !!!
 Un projet qui vient du cœur de Dieu et qui unifie l'Eglise !!! Je vous encourage a participer a ce nouveau concept !`,
+      rating: 5,
+      color: "3b82f6",
+    },
+    {
+      name: "Emmanuel Arson",
+      role: "Conducteur de louange",
+      content: `Avec cette application qui est nait du cœur de Dieu, je m'attend à de grandes choses et bien plus qu'un simple moyen d'échange et de communication. Je crois pleinement que la grâce et la faveur de notre Seigneur repose sur cette application pleine d'avenir.`,
       rating: 5,
       color: "3b82f6",
     },
