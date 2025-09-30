@@ -37,6 +37,13 @@ Un projet qui vient du cœur de Dieu et qui unifie l'Eglise !!! Je vous encourag
       rating: 5,
       color: "3b82f6",
     },
+    {
+      name: "Frédéric",
+      role: "Expert IA",
+      content: `L'application ConnectStar répond à une authentique inspiration de Dieu qu'il m'avait également communiquée. Quel bonheur de voir qu'un frère en Christ a réalisé lui-même un tel projet ! Pour garder le lien entre chrétiens nous avons besoin d'un réseau privé, hors des regards des GAFAM, pour échanger en toute confidentialité, sans compromettre nos données et en gardant d'un bout à l'autre la maîtrise totale de nos informations. C'est une clé importante pour le corps de Christ par les temps qui courent !`,
+      rating: 5,
+      color: "3b82f6",
+    },
     // {
     //   name: "Thaïs Casmmas",
     //   role: "Leader de louange",
