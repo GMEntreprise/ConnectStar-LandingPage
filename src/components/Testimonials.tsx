@@ -1,64 +1,21 @@
 import { Quote, Star } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import DynamicCounter from "./DynamicCounter";
 import { StatsBar } from "./StatsBar";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Richard Garbin",
-      role: "Président de l'assemblée connectée",
-      content: `ConnectStar, enfin une application chrétienne de messages et d'appels. Elle sera équipée d'outils destinés aux chrétiens et, surtout, elle promet de ne pas partager les informations personnelles. Aucune de ses concurrentes, même les plus célèbres, ne propose cela. Je suis vraiment emballé à l'idée de découvrir tout cela.`,
-      rating: 5,
-      color: "8b5cf6",
-    },
-    {
-      name: "Armand Kaczmarek",
-      role: "Chef d'entreprise",
-      content:
-        "Je trouve le concept ConnectStar particulièrement nécessaire et judicieux pour les Chretiens. Notamment pour l’aspect confidentialité de nos données dans les temps qui arrivent. Bravo.",
-      rating: 5,
-      color: "10b981",
-    },
-    {
-      name: "Marie Edouard",
-      role: "Médecin Généraliste",
-      content: `ConnectStar est une réelle révolution !
-Une innovation prometteuse pour réunir et rassembler des millions de chrétiens.
-ConnectStar s'avère prometteuse pour élargir le réseau sur la toile entre chrétiens.
-À découvrir sans réserve !`,
-      rating: 5,
-      color: "3b82f6",
-    },
-    {
-      name: "Sandrine  Arson",
-      role: "Conducteur de louange",
-      content: `Application chrétienne vraiment passionnante !!!
-Un projet qui vient du cœur de Dieu et qui unifie l'Eglise !!! Je vous encourage a participer a ce nouveau concept !`,
-      rating: 5,
-      color: "3b82f6",
-    },
-    {
-      name: "Emmanuel Arson",
-      role: "Conducteur de louange",
-      content: `Avec cette application qui est nait du cœur de Dieu, je m'attend à de grandes choses et bien plus qu'un simple moyen d'échange et de communication. Je crois pleinement que la grâce et la faveur de notre Seigneur repose sur cette application pleine d'avenir.`,
-      rating: 5,
-      color: "3b82f6",
-    },
-    {
-      name: "Frédéric",
-      role: "Expert IA",
-      content: `L'application ConnectStar répond à une authentique inspiration de Dieu qu'il m'avait également communiquée. Quel bonheur de voir qu'un frère en Christ a réalisé lui-même un tel projet ! Pour garder le lien entre chrétiens nous avons besoin d'un réseau privé, hors des regards des GAFAM, pour échanger en toute confidentialité, sans compromettre nos données et en gardant d'un bout à l'autre la maîtrise totale de nos informations. C'est une clé importante pour le corps de Christ par les temps qui courent !`,
-      rating: 5,
-      color: "3b82f6",
-    },
-    // {
-    //   name: "Thaïs Casmmas",
-    //   role: "Leader de louange",
-    //   content: ``,
-    //   rating: 5,
-    //   color: "3b82f6",
-    // },
-  ];
+  const { t } = useTranslation("home");
+  const testimonialsList = t("testimonials.list", { returnObjects: true }) as Array<{
+    name: string;
+    role: string;
+    content: string;
+  }>;
+
+  const testimonials = testimonialsList.map((testimonial, index) => ({
+    ...testimonial,
+    rating: 5,
+    color: ["8b5cf6", "10b981", "3b82f6", "3b82f6", "3b82f6", "3b82f6"][index] || "3b82f6",
+  }));
 
   return (
     <section className="py-20 bg-white">
@@ -66,11 +23,10 @@ Un projet qui vient du cœur de Dieu et qui unifie l'Eglise !!! Je vous encourag
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Ils nous font déjà confiance
+            {t("testimonials.header.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Des leaders spirituels et membres de communautés chrétiennes
-            partagent leur enthousiasme pour ConnectStar.
+            {t("testimonials.header.description")}
           </p>
         </div>
 
@@ -149,11 +105,11 @@ Un projet qui vient du cœur de Dieu et qui unifie l'Eglise !!! Je vous encourag
           stats={[
             {
               value: <DynamicCounter className="text-blue-600" />,
-              label: "Inscrits en attente",
+              label: t("testimonials.stats.signups"),
             },
-            { value: "100%", label: "Sécurisé et sans vente de données" },
-            { value: "100%", label: "Taux de satisfaction" },
-            { value: "2025", label: "Année de lancement" },
+            { value: "100%", label: t("testimonials.stats.security") },
+            { value: "100%", label: t("testimonials.stats.satisfaction") },
+            { value: "2025", label: t("testimonials.stats.launch") },
           ]}
           className="text-blue-600"
         />

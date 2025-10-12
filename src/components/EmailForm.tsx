@@ -1,5 +1,6 @@
 import { ArrowRight, Mail } from "lucide-react";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useBevoSignup } from "../hooks/useBevoSignup";
 import { emailSchema } from "../schemas/email";
 
@@ -8,6 +9,7 @@ interface EmailFormProps {
 }
 
 const EmailForm: React.FC<EmailFormProps> = ({ onSuccess }) => {
+  const { t } = useTranslation("common");
   const [email, setEmail] = useState("");
   const [validationError, setValidationError] = useState<string | null>(null);
   const signupMutation = useBevoSignup();
@@ -45,7 +47,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ onSuccess }) => {
             setEmail(e.target.value);
             if (validationError) setValidationError(null);
           }}
-          placeholder="Votre email de contact"
+          placeholder={t("emailForm.placeholder")}
           className={`w-full pl-12 pr-4 py-4 border-2 rounded-xl focus:outline-none transition-colors duration-200 text-lg ${
             validationError
               ? "border-red-300 focus:border-red-500"
@@ -66,7 +68,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ onSuccess }) => {
           <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
         ) : (
           <>
-            <span>Rejoindre la liste d'attente</span>
+            <span>{t("emailForm.submit")}</span>
             <ArrowRight className="w-5 h-5" />
           </>
         )}

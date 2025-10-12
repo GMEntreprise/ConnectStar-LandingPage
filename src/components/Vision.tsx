@@ -1,33 +1,31 @@
 import { BookOpen, Heart, Lightbulb, Shield, Star, Users } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Vision = () => {
+  const { t } = useTranslation("home");
   const visionPoints = [
     {
       icon: Heart,
-      title: "Connecter les cœurs dans la foi",
-      description:
-        "Créer des liens authentiques entre croyants du monde entier, au-delà des frontières géographiques et dénominationnelles.",
+      title: t("vision.points.connect.title"),
+      description: t("vision.points.connect.description"),
       color: "from-red-500 to-pink-500",
     },
     {
       icon: BookOpen,
-      title: "Rendre la Parole accessible",
-      description:
-        "Intégrer naturellement la Bible dans nos conversations quotidiennes pour nourrir notre croissance spirituelle.",
+      title: t("vision.points.word.title"),
+      description: t("vision.points.word.description"),
       color: "from-blue-500 to-indigo-500",
     },
     {
       icon: Users,
-      title: "Bâtir une communauté bienveillante",
-      description:
-        "Offrir un espace sûr où chacun peut partager, grandir et être encouragé dans son parcours de foi.",
+      title: t("vision.points.community.title"),
+      description: t("vision.points.community.description"),
       color: "from-green-500 to-emerald-500",
     },
     {
       icon: Shield,
-      title: "Protéger nos données spirituelles",
-      description:
-        "Garantir la confidentialité et la sécurité de nos échanges spirituels, loin des algorithmes commerciaux et de la surveillance.",
+      title: t("vision.points.privacy.title"),
+      description: t("vision.points.privacy.description"),
       color: "from-purple-500 to-violet-500",
     },
   ];
@@ -35,21 +33,18 @@ const Vision = () => {
   const values = [
     {
       icon: Star,
-      title: "Authenticité",
-      description:
-        "Des échanges vrais et sincères, loin des artifices des réseaux sociaux traditionnels.",
+      title: t("vision.values.list.authenticity.title"),
+      description: t("vision.values.list.authenticity.description"),
     },
     {
       icon: Heart,
-      title: "Bienveillance",
-      description:
-        "Un environnement où règnent l'amour, le respect et l'encouragement mutuel.",
+      title: t("vision.values.list.kindness.title"),
+      description: t("vision.values.list.kindness.description"),
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description:
-        "Allier technologie moderne et valeurs éternelles pour servir la communauté chrétienne.",
+      title: t("vision.values.list.innovation.title"),
+      description: t("vision.values.list.innovation.description"),
     },
   ];
 
@@ -62,12 +57,10 @@ const Vision = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Ma Vision pour ConnectStar
+            {t("vision.header.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Imaginer une messagerie qui ne se contente pas de connecter les
-            téléphones, mais qui connecte véritablement les âmes dans la foi et
-            l'amour du Christ.
+            {t("vision.header.description")}
           </p>
         </div>
 
@@ -101,99 +94,85 @@ const Vision = () => {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-10">
               <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                Pourquoi ConnectStar existe ? Une Révélation Divine
+                {t("vision.story.title")}
               </h3>
             </div>
 
             <div className="space-y-6 text-base md:text-lg leading-relaxed opacity-95">
               <p className="font-medium text-amber-200">
-                En fin d'année 2024, Dieu m'a parlé sur WhatsApp.
+                {t("vision.story.paragraphs.p1")}
               </p>
 
               <p>
-                Il m'a dit :{" "}
+                {t("vision.story.paragraphs.p2")}{" "}
                 <span className="font-semibold italic">
-                  "Mitch, WhatsApp vend les données des gens. Et cela ne
-                  s'arrêtera pas là."
+                  {t("vision.story.paragraphs.p2quote")}
                 </span>
               </p>
 
               <p>
-                Alors je lui ai demandé :{" "}
+                {t("vision.story.paragraphs.p3a")}{" "}
                 <span className="italic">
-                  "Seigneur, que veux-tu que je fasse ?"
+                  {t("vision.story.paragraphs.p3b")}
                 </span>
                 <br />
-                Il m'a répondu :{" "}
+                {t("vision.story.paragraphs.p3c")}{" "}
                 <span className="font-semibold">
-                  "Je veux que tu développes une alternative de WhatsApp, mais
-                  pour les chrétiens. Je veux que mon peuple arrête d'utiliser
-                  WhatsApp."
+                  {t("vision.story.paragraphs.p3d")}
                 </span>
               </p>
 
               <p>
-                J'ai dit :{" "}
+                {t("vision.story.paragraphs.p4a")}{" "}
                 <span className="italic">
-                  "D'accord Seigneur, donne-moi l'intelligence pour la créer."
+                  {t("vision.story.paragraphs.p4b")}
                 </span>
                 <br />
-                Puis j'ai demandé :{" "}
+                {t("vision.story.paragraphs.p4c")}{" "}
                 <span className="italic">
-                  "Seigneur, comment s'appellera l'application ?"
+                  {t("vision.story.paragraphs.p4d")}
                 </span>
                 <br />
-                Il m'a répondu :{" "}
+                {t("vision.story.paragraphs.p4e")}{" "}
                 <span className="font-semibold text-amber-300">
-                  "ConnectStar."
+                  {t("vision.story.paragraphs.p4f")}
                 </span>
               </p>
 
               <p>
-                Surpris, j'ai demandé :{" "}
+                {t("vision.story.paragraphs.p5a")}{" "}
                 <span className="italic">
-                  "Mais Seigneur, que signifie ConnectStar ?"
+                  {t("vision.story.paragraphs.p5b")}
                 </span>
                 <br />
-                Il m'a rappelé :{" "}
+                {t("vision.story.paragraphs.p5c")}{" "}
                 <span className="font-semibold">
-                  "Quand j'ai parlé à Abraham, je lui ai dit : regarde le ciel
-                  et compte les étoiles. Voilà ce que veut dire ConnectStar :
-                  Connectés jusqu'aux extrémités du monde."
+                  {t("vision.story.paragraphs.p5d")}
                 </span>
               </p>
 
               <p className="font-medium">
-                Ainsi, Dieu m'a inspiré et guidé dans la création de cette
-                application. Mon objectif à long terme est que tous les
-                chrétiens qui connaissent et servent Jésus quittent WhatsApp,
-                pour se rassembler sur ConnectStar.
+                {t("vision.story.paragraphs.p6")}
               </p>
 
               <p>
-                Nous savons que dans les temps à venir, plus rien ne sera
-                vraiment sécurisé. Si, comme moi, vous désirez changer les
-                choses, rejoignez cette nouvelle aventure et contribuez à
-                l'améliorer.
+                {t("vision.story.paragraphs.p7")}
               </p>
 
               <p className="text-sm opacity-90">
-                L'application sera en version bêta : certaines choses devront
-                être perfectionnées, alors n'hésitez pas à me contacter pour
-                partager vos suggestions.
+                {t("vision.story.paragraphs.p8")}
               </p>
             </div>
 
             <div className="text-center mt-10">
               <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-8 py-6">
                 <p className="text-lg font-medium italic mb-2">
-                  "Regarde vers le ciel, et compte les étoiles, si tu peux les
-                  compter"
+                  {t("vision.story.quote")}
                 </p>
-                <p className="text-sm text-amber-300">- Genèse 15:5</p>
+                <p className="text-sm text-amber-300">{t("vision.story.reference")}</p>
                 <div className="mt-4 pt-4 border-t border-white/30">
-                  <p className="font-semibold text-base">Edouard GM</p>
-                  <p className="text-sm opacity-90">Fondateur de ConnectStar</p>
+                  <p className="font-semibold text-base">{t("vision.story.founder.name")}</p>
+                  <p className="text-sm opacity-90">{t("vision.story.founder.title")}</p>
                 </div>
               </div>
             </div>
@@ -203,11 +182,10 @@ const Vision = () => {
         {/* Core Values */}
         <div className="text-center mb-12">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Nos Valeurs Fondamentales
+            {t("vision.values.title")}
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-            Ces principes guident chaque décision dans le développement de
-            ConnectStar
+            {t("vision.values.description")}
           </p>
         </div>
 
@@ -234,12 +212,10 @@ const Vision = () => {
         <div className="text-center mt-16">
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-3xl mx-auto">
             <h4 className="text-2xl font-semibold text-gray-900 mb-4">
-              Rejoignez cette vision
+              {t("vision.cta.title")}
             </h4>
             <p className="text-gray-600 mb-6">
-              ConnectStar n'est pas qu'une application, c'est un mouvement pour
-              transformer la façon dont nous vivons notre foi ensemble à l'ère
-              numérique.
+              {t("vision.cta.description")}
             </p>
             <button
               onClick={() =>
@@ -249,7 +225,7 @@ const Vision = () => {
               }
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
-              Faire partie de l'aventure
+              {t("vision.cta.button")}
             </button>
           </div>
         </div>

@@ -1,0 +1,149 @@
+{
+  "privacy": {
+    "backButton": "Retour à ConnectStar",
+    "title": "Politique de Confidentialité",
+    "updated": "Dernière mise à jour : Janvier 2025",
+    "intro": {
+      "title": "Notre Engagement",
+      "content": "ConnectStar a été créée sur une révélation divine pour protéger les données du peuple de Dieu. Contrairement à WhatsApp et autres messageries, nous ne vendons JAMAIS vos données personnelles. Votre vie privée spirituelle est sacrée."
+    },
+    "section1": {
+      "title": "1. Données Collectées",
+      "subtitle1": "Données d'inscription :",
+      "items1": [
+        "Adresse email (pour la liste d'attente)",
+        "Date d'inscription",
+        "Source d'inscription (landing page)"
+      ],
+      "subtitle2": "Données d'utilisation future :",
+      "items2": [
+        "Messages (chiffrés bout-à-bout)",
+        "Contacts (stockés localement)",
+        "Préférences spirituelles (Bible, prières)"
+      ]
+    },
+    "section2": {
+      "title": "2. Utilisation des Données",
+      "intro": "Nous utilisons vos données uniquement pour :",
+      "items": [
+        "Vous informer du lancement de ConnectStar",
+        "Vous donner un accès prioritaire à la version bêta",
+        "Améliorer l'expérience utilisateur",
+        "Assurer la sécurité de la plateforme"
+      ],
+      "warnings": [
+        "❌ Nous ne vendons JAMAIS vos données à des tiers",
+        "❌ Aucune publicité ciblée",
+        "❌ Aucun tracking commercial"
+      ]
+    },
+    "section3": {
+      "title": "3. Sécurité et Chiffrement",
+      "items": [
+        "Chiffrement bout-à-bout pour tous les messages",
+        "Serveurs hébergés dans des pays respectant la vie privée",
+        "Authentification sécurisée",
+        "Pas de sauvegarde des clés de chiffrement",
+        "Suppression automatique des messages temporaires"
+      ]
+    },
+    "section4": {
+      "title": "4. Vos Droits",
+      "intro": "Vous avez le droit de :",
+      "items": [
+        "Consulter toutes vos données personnelles",
+        "Modifier ou corriger vos informations",
+        "Supprimer votre compte à tout moment",
+        "Exporter vos données",
+        "Vous désinscrire de la liste d'attente"
+      ]
+    },
+    "section5": {
+      "title": "5. Contact",
+      "intro": "Pour toute question concernant cette politique de confidentialité :",
+      "email": "📧 Email :",
+      "founder": "👨‍💻 Fondateur : Edouard GM"
+    },
+    "footer": "Cette politique peut être mise à jour pour refléter les améliorations de ConnectStar. Les utilisateurs seront informés de tout changement majeur."
+  },
+  "terms": {
+    "backButton": "Retour à ConnectStar",
+    "title": "Conditions d'Utilisation",
+    "updated": "Dernière mise à jour : Janvier 2025",
+    "intro": {
+      "title": "Mission Divine",
+      "content": "ConnectStar est née d'une révélation divine pour créer un espace sûr où les chrétiens peuvent communiquer, prier et grandir spirituellement ensemble. En utilisant ConnectStar, vous acceptez de respecter nos valeurs chrétiennes et ces conditions d'utilisation."
+    },
+    "section1": {
+      "title": "1. Acceptation des Conditions",
+      "p1": "En vous inscrivant à ConnectStar ou en utilisant notre application, vous acceptez d'être lié par ces conditions d'utilisation et notre politique de confidentialité.",
+      "p2": "Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ConnectStar."
+    },
+    "section2": {
+      "title": "2. Utilisation Appropriée",
+      "subtitle": "ConnectStar est conçue pour :",
+      "items": [
+        "La communication entre chrétiens",
+        "Le partage de versets bibliques et méditations",
+        "L'organisation de prières collectives",
+        "L'édification spirituelle mutuelle",
+        "La communion fraternelle"
+      ],
+      "warning": "⚠️ L'application est en version bêta et peut contenir des bugs. Nous travaillons constamment à l'améliorer avec vos retours."
+    },
+    "section3": {
+      "title": "3. Comportements Interdits",
+      "intro": "Il est strictement interdit d'utiliser ConnectStar pour :",
+      "items": [
+        "Diffuser du contenu offensant, haineux ou inapproprié",
+        "Harceler, menacer ou intimider d'autres utilisateurs",
+        "Partager du contenu contraire aux valeurs chrétiennes",
+        "Spam ou sollicitation commerciale non autorisée",
+        "Violer les droits d'auteur ou la propriété intellectuelle",
+        "Diffuser de fausses informations ou doctrines",
+        "Activités illégales ou nuisant à la communauté"
+      ]
+    },
+    "section4": {
+      "title": "4. Modération Bienveillante",
+      "intro": "ConnectStar pratique une modération bienveillante pour maintenir un environnement sain :",
+      "items": [
+        "Signalement communautaire de contenus inappropriés",
+        "Intervention humaine pour résoudre les conflits",
+        "Avertissements avant sanctions",
+        "Suspensions temporaires ou permanentes si nécessaire",
+        "Restauration de comptes après amendement sincère"
+      ]
+    },
+    "section5": {
+      "title": "5. Propriété Intellectuelle",
+      "items": [
+        "ConnectStar et tous ses éléments restent propriété d'Edouard GM",
+        "La Bible intégrée utilise des traductions libres de droits",
+        "Vous conservez les droits sur vos messages personnels",
+        "Les contenus partagés publiquement peuvent être modérés",
+        "Respect des droits d'auteur pour tous les partages"
+      ]
+    },
+    "section6": {
+      "title": "6. Limitations de Responsabilité",
+      "intro": "ConnectStar est développée avec passion pour le Corps du Christ, mais :",
+      "items": [
+        "L'application est fournie \"en l'état\" en version bêta",
+        "Nous ne garantissons pas un service sans interruption",
+        "Les utilisateurs sont responsables de leurs interactions",
+        "Nous ne sommes pas responsables des contenus tiers",
+        "L'utilisation se fait à vos propres risques"
+      ]
+    },
+    "section7": {
+      "title": "7. Contact et Support",
+      "intro": "Pour toute question concernant ces conditions :",
+      "email": "📧 Email :",
+      "founder": "👨‍💻 Fondateur : Edouard GM",
+      "support": "Nous sommes là pour vous accompagner dans cette aventure spirituelle ! 🙏"
+    },
+    "footer1": "Ces conditions d'utilisation régissent votre relation avec ConnectStar. En cas de conflit, la résolution se fera dans un esprit chrétien de réconciliation.",
+    "footer2": "\"Car là où deux ou trois sont rassemblés en mon nom, je suis au milieu d'eux.\" - Matthieu 18:20"
+  }
+}

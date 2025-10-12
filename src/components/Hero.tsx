@@ -1,5 +1,6 @@
 import { ArrowRight, Heart, Smartphone } from "lucide-react";
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { useBrevoContacts } from "../hooks/useBrevoContacts";
 import DynamicCounter from "./DynamicCounter";
 
@@ -7,6 +8,7 @@ const backgroundPatternUrl =
   "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234F46E5' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E";
 
 const Hero = () => {
+  const { t } = useTranslation("home");
   const { data: contactsData } = useBrevoContacts();
 
   const scrollToSignup = () => {
@@ -48,30 +50,28 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8 animate-pulse">
             <Heart className="w-4 h-4" />
-            <span>Bientôt disponible sur iOS & Android</span>
+            <span>{t("hero.badge")}</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-            Messagerie Chrétienne Moderne avec{" "}
+            {t("hero.title.part1")}{" "}
             <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-500">
-              Bible Intégrée
+              {t("hero.title.highlight")}
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-            ConnectStar est la première messagerie chrétienne moderne avec la
-            Bible intégrée. Échangez, priez ensemble et grandissez
-            spirituellement dans un espace sûr et inspirant.
+            {t("hero.subtitle")}
           </p>
 
           {/* Value Proposition */}
           <div className="flex flex-col md:flex-row items-center justify-center space-y-3 md:space-y-0 md:space-x-8 mb-8 sm:mb-12 text-gray-700">
             {[
-              "Bible intégrée",
-              "Sécurisé & privé",
-              "Communauté bienveillante",
+              t("hero.values.bible"),
+              t("hero.values.secure"),
+              t("hero.values.community"),
             ].map((text, i) => (
               <div key={i} className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -86,24 +86,24 @@ const Hero = () => {
               onClick={scrollToSignup}
               className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2"
             >
-              <span>Rejoindre la liste d&apos;attente</span>
+              <span>{t("hero.cta")}</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </button>
             <div className="flex items-center space-x-2 text-gray-600 text-xs sm:text-sm">
               <Smartphone className="w-5 h-5" />
-              <span>Gratuit • iOS & Android • 2025</span>
+              <span>{t("hero.platform")}</span>
             </div>
           </div>
 
           {/* Social Proof */}
           <div className="text-center text-gray-500">
             <p className="text-sm sm:text-base mb-4">
-              Déjà{" "}
+              {t("hero.social.part1")}{" "}
               <DynamicCounter
                 className="font-semibold text-blue-600"
                 fallbackCount={2847}
               />{" "}
-              personnes inscrites
+              {t("hero.social.part2")}
             </p>
             <div className="flex items-center justify-center space-x-1">
               <div className="flex -space-x-2">

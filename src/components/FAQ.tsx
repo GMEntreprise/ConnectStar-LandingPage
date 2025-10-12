@@ -8,8 +8,10 @@ import {
   Smartphone,
 } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const FAQ = () => {
+  const { t } = useTranslation("home");
   const [openItems, setOpenItems] = useState<string[]>([]);
 
   const toggleItem = (index: string) => {
@@ -18,73 +20,32 @@ const FAQ = () => {
     );
   };
 
+  const faqCategories = t("faq.categories", { returnObjects: true }) as Record<
+    string,
+    {
+      title: string;
+      questions: Array<{ question: string; answer: string }>;
+    }
+  >;
+
   const categories = [
     {
-      title: "Vision Divine",
+      title: faqCategories.divine.title,
       icon: Cross,
       color: "text-blue-600",
-      faqs: [
-        {
-          question: "Pourquoi Dieu vous a-t-il appelé à créer ConnectStar ?",
-          answer:
-            "Au début de l'année 2025, Dieu m'a parlé clairement sur WhatsApp qui vend les données de Son peuple. Il m'a dit : 'Mitch, je veux que tu développes une application pour les chrétiens.' ConnectStar est née de cette révélation divine pour protéger et unir le Corps du Christ.",
-        },
-        {
-          question: "Que signifie le nom 'ConnectStar' ?",
-          answer:
-            "Dieu m'a rappelé sa promesse à Abraham : 'regarde le ciel et compte les étoiles.' ConnectStar signifie : Connectés jusqu'aux extrémités du monde. C'est une vision divine d'unité mondiale des chrétiens.",
-        },
-      ],
+      faqs: faqCategories.divine.questions,
     },
     {
-      title: "Application",
+      title: faqCategories.app.title,
       icon: Smartphone,
       color: "text-green-600",
-      faqs: [
-        {
-          question: "ConnectStar est-elle vraiment gratuite ?",
-          answer:
-            "Oui, ConnectStar sera toujours entièrement gratuite pour tous les utilisateurs. Aucun abonnement, aucun frais caché. C'est une mission divine, pas commerciale.",
-        },
-        {
-          question: "Quelle est cette fonctionnalité surprise 🎁 ?",
-          answer:
-            "C'est une innovation révolutionnaire que j'ai développée spécialement pour ConnectStar ! Je ne peux pas encore la dévoiler, mais elle va transformer votre expérience spirituelle. Les premiers inscrits la découvriront en exclusivité.",
-        },
-        {
-          question: "Quand l'application sera-t-elle disponible ?",
-          answer:
-            "ConnectStar sera lancée en version bêta fin d'année 2025. Les membres de la liste d'attente auront un accès prioritaire et testeront toutes les fonctionnalités en avant-première.",
-        },
-        {
-          question: "L'application aura-t-elle des bugs en version bêta ?",
-          answer:
-            "Oui, comme toute application en développement. Contrairement à WhatsApp, je n'ai pas leur financement, mais avec votre aide et vos retours, nous perfectionnerons ConnectStar ensemble.",
-        },
-      ],
+      faqs: faqCategories.app.questions,
     },
     {
-      title: "Soutien & Donations",
+      title: faqCategories.support.title,
       icon: DollarSign,
       color: "text-purple-600",
-      faqs: [
-        {
-          question:
-            "Comment puis-je soutenir le développement de ConnectStar ?",
-          answer:
-            "ConnectStar est développée sans rémunération par passion pour le Corps du Christ. Vous pouvez nous aider par vos prières, en partageant le projet, et bientôt par des donations volontaires pour couvrir les coûts serveurs et accélérer le développement.",
-        },
-        {
-          question: "Pourquoi avez-vous besoin de donations ?",
-          answer:
-            "Je développe ConnectStar gratuitement depuis des mois pour accomplir la parole de Dieu. Les donations aideront à payer les serveurs, améliorer l'infrastructure et permettre un développement plus rapide pour servir plus efficacement le Corps du Christ.",
-        },
-        {
-          question: "ConnectStar peut-elle vraiment remplacer WhatsApp ?",
-          answer:
-            "C'est la vision que Dieu m'a donnée ! Mon objectif à long terme est que tous les chrétiens qui connaissent et servent Jésus quittent WhatsApp pour se rassembler sur ConnectStar. Ensemble, nous pouvons y arriver.",
-        },
-      ],
+      faqs: faqCategories.support.questions,
     },
   ];
 
@@ -102,10 +63,10 @@ const FAQ = () => {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Questions fréquentes
+            {t("faq.header.title")}
           </h2>
           <p className="text-lg md:text-xl text-gray-600">
-            Encore des questions ? Nous sommes là pour vous aider.
+            {t("faq.header.description")}
           </p>
         </div>
 
@@ -168,14 +129,14 @@ const FAQ = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-gray-600 mb-4">
-            Vous n’avez pas trouvé la réponse ?
+            {t("faq.cta.text")}
           </p>
           <a
             href="mailto:connectstart.contact@gmail.com"
             className="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-medium shadow hover:bg-blue-700 transition-colors"
           >
             <Mail className="w-5 h-5 mr-2" />
-            Contactez-moi directement
+            {t("faq.cta.button")}
           </a>
         </div>
       </div>

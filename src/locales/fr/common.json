@@ -1,0 +1,49 @@
+{
+  "header": {
+    "nav": {
+      "features": "Fonctionnalités",
+      "vision": "Ma Vision",
+      "faq": "FAQ",
+      "cta": "Rejoindre la liste"
+    }
+  },
+  "footer": {
+    "description": "La première messagerie chrétienne moderne avec la Bible intégrée. Connectez-vous dans la foi, grandissez ensemble spirituellement.",
+    "tagline": "Fait avec amour pour la communauté chrétienne",
+    "sections": {
+      "navigation": "Navigation",
+      "contact": "Contact",
+      "support": "SUPPORT & COMMUNAUTÉ"
+    },
+    "supportDescription": "Je suis là pour vous accompagner dans votre découverte de ConnectStar.",
+    "links": {
+      "features": "Fonctionnalités",
+      "vision": "Ma Vision",
+      "faq": "FAQ",
+      "signup": "Inscription"
+    },
+    "stats": {
+      "signups": "Inscrits en attente",
+      "security": "Sécurisé et sans vente de données",
+      "satisfaction": "Taux de satisfaction",
+      "launch": "Année de lancement"
+    },
+    "copyright": "© {year} ConnectStar. Tous droits réservés. • Développé avec passion pour la communauté chrétienne.",
+    "legal": {
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
+    },
+    "quote": "\"Car là où deux ou trois sont rassemblés en mon nom, je suis au milieu d'eux.\" - Matthieu 18:20"
+  },
+  "emailForm": {
+    "placeholder": "Votre email de contact",
+    "submit": "Rejoindre la liste d'attente"
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil pour découvrir ConnectStar.",
+    "homeButton": "Retour à l'accueil",
+    "backButton": "Page précédente",
+    "quote": "\"Car là où deux ou trois sont rassemblés en mon nom, je suis au milieu d'eux.\" - Matthieu 18:20"
+  }
+}

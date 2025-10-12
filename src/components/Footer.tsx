@@ -1,8 +1,11 @@
 import { BookOpen, Heart, Home, Info, Mail, Users } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import logo from "../assets/logo-connectStar.webp";
 import DynamicCounter from "./DynamicCounter";
 import { StatsBar } from "./StatsBar";
+
 const Footer = () => {
+  const { t } = useTranslation("common");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,20 +22,19 @@ const Footer = () => {
               <span className="text-2xl font-bold">ConnectStar</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              La première messagerie chrétienne moderne avec la Bible intégrée.
-              Connectez-vous dans la foi, grandissez ensemble spirituellement.
+              {t("footer.description")}
             </p>
             <div className="flex items-center space-x-2 text-gray-400">
               <Heart className="w-4 h-4" />
               <span className="text-sm">
-                Fait avec amour pour la communauté chrétienne
+                {t("footer.tagline")}
               </span>
             </div>
           </div>
 
           {/* Quick Links / Navigation */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Navigation</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.sections.navigation")}</h3>
             <ul className="space-y-3">
               <li>
                 <button
@@ -44,7 +46,7 @@ const Footer = () => {
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   <Home className="w-4 h-4" />
-                  <span>Fonctionnalités</span>
+                  <span>{t("footer.links.features")}</span>
                 </button>
               </li>
               <li>
@@ -57,7 +59,7 @@ const Footer = () => {
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   <BookOpen className="w-4 h-4" />
-                  <span>Ma Vision</span>
+                  <span>{t("footer.links.vision")}</span>
                 </button>
               </li>
               <li>
@@ -70,7 +72,7 @@ const Footer = () => {
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   <Info className="w-4 h-4" />
-                  <span>FAQ</span>
+                  <span>{t("footer.links.faq")}</span>
                 </button>
               </li>
               <li>
@@ -83,7 +85,7 @@ const Footer = () => {
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   <Users className="w-4 h-4" />
-                  <span>Inscription</span>
+                  <span>{t("footer.links.signup")}</span>
                 </button>
               </li>
             </ul>
@@ -91,7 +93,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.sections.contact")}</h3>
 
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-gray-400 " />
@@ -105,11 +107,10 @@ const Footer = () => {
 
             <div className="mt-6">
               <h4 className="text-sm font-semibold text-gray-400 mb-3">
-                SUPPORT & COMMUNAUTÉ
+                {t("footer.sections.support")}
               </h4>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Je suis là pour vous accompagner dans votre découverte de
-                ConnectStar.
+                {t("footer.supportDescription")}
               </p>
             </div>
           </div>
@@ -121,11 +122,11 @@ const Footer = () => {
           stats={[
             {
               value: <DynamicCounter className="text-blue-400" />,
-              label: "Inscrits en attente",
+              label: t("footer.stats.signups"),
             },
-            { value: "100%", label: "Sécurisé et sans vente de données" },
-            { value: "100%", label: "Taux de satisfaction" },
-            { value: "2025", label: "Année de lancement" },
+            { value: "100%", label: t("footer.stats.security") },
+            { value: "100%", label: t("footer.stats.satisfaction") },
+            { value: "2025", label: t("footer.stats.launch") },
           ]}
           className="text-blue-400"
         />
@@ -134,8 +135,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} ConnectStar. Tous droits réservés. • Développé
-              avec passion pour la communauté chrétienne.
+              {t("footer.copyright", { year: currentYear })}
             </div>
             <div className="flex items-center space-x-6 text-sm">
               <a
@@ -143,14 +143,14 @@ const Footer = () => {
                 className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-1"
               >
                 <Info className="w-4 h-4" />
-                <span>Politique de confidentialité</span>
+                <span>{t("footer.legal.privacy")}</span>
               </a>
               <a
                 href="/terms"
                 className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-1"
               >
                 <Info className="w-4 h-4" />
-                <span>Conditions d'utilisation</span>
+                <span>{t("footer.legal.terms")}</span>
               </a>
             </div>
           </div>
@@ -159,8 +159,7 @@ const Footer = () => {
         {/* Final Message */}
         <div className="mt-8 text-center">
           <p className="text-gray-500 text-sm italic">
-            "Car là où deux ou trois sont rassemblés en mon nom, je suis au
-            milieu d'eux." - Matthieu 18:20
+            {t("footer.quote")}
           </p>
         </div>
       </div>

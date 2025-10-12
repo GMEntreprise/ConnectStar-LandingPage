@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "sonner";
 import App from "./App.tsx";
+import "./i18n/config";
 import "./index.css";
 const queryClient = new QueryClient({
   defaultOptions: {

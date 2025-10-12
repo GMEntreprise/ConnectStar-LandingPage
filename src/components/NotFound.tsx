@@ -1,11 +1,13 @@
 import { ArrowLeft, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface NotFoundProps {
   onBack?: () => void;
 }
 
 const NotFound: React.FC<NotFoundProps> = ({ onBack }) => {
+  const { t } = useTranslation("common");
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -29,12 +31,11 @@ const NotFound: React.FC<NotFoundProps> = ({ onBack }) => {
           </div>
           
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            Page non trouvée
+            {t("notFound.title")}
           </h1>
-          
+
           <p className="text-gray-600 mb-8">
-            La page que vous recherchez n'existe pas ou a été déplacée. 
-            Retournez à l'accueil pour découvrir ConnectStar.
+            {t("notFound.description")}
           </p>
         </div>
 
@@ -44,21 +45,21 @@ const NotFound: React.FC<NotFoundProps> = ({ onBack }) => {
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center space-x-2"
           >
             <Home className="w-5 h-5" />
-            <span>Retour à l'accueil</span>
+            <span>{t("notFound.homeButton")}</span>
           </button>
-          
+
           <button
             onClick={handleBack}
             className="w-full bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-full hover:bg-gray-50 transition-all duration-200 flex items-center justify-center space-x-2"
           >
             <ArrowLeft className="w-5 h-5" />
-            <span>Page précédente</span>
+            <span>{t("notFound.backButton")}</span>
           </button>
         </div>
 
         <div className="mt-12 text-center">
           <p className="text-sm text-gray-500 italic">
-            "Car là où deux ou trois sont rassemblés en mon nom, je suis au milieu d'eux." - Matthieu 18:20
+            {t("notFound.quote")}
           </p>
         </div>
       </div>

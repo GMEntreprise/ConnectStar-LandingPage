@@ -1,7 +1,11 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import logo from "../assets/logo-connectStar.webp";
+import LanguageSwitcher from "./LanguageSwitcher";
+
 const Header = () => {
+  const { t } = useTranslation('common');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -28,25 +32,26 @@ const Header = () => {
               onClick={() => scrollToSection("features")}
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              Fonctionnalités
+              {t('header.nav.features')}
             </button>
             <button
               onClick={() => scrollToSection("vision")}
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              Ma Vision
+              {t('header.nav.vision')}
             </button>
             <button
               onClick={() => scrollToSection("faq")}
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              FAQ
+              {t('header.nav.faq')}
             </button>
+            <LanguageSwitcher />
             <button
               onClick={() => scrollToSection("signup")}
               className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
-              Rejoindre la liste
+              {t('header.nav.cta')}
             </button>
           </nav>
 
@@ -70,26 +75,29 @@ const Header = () => {
               onClick={() => scrollToSection("features")}
               className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4"
             >
-              Fonctionnalités
+              {t('header.nav.features')}
             </button>
             <button
               onClick={() => scrollToSection("vision")}
               className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4"
             >
-              Ma Vision
+              {t('header.nav.vision')}
             </button>
             <button
               onClick={() => scrollToSection("faq")}
               className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4"
             >
-              FAQ
+              {t('header.nav.faq')}
             </button>
+            <div className="px-4 flex justify-center">
+              <LanguageSwitcher />
+            </div>
             <div className="px-4 mt-4">
               <button
                 onClick={() => scrollToSection("signup")}
                 className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md text-center"
               >
-                Rejoindre la liste
+                {t('header.nav.cta')}
               </button>
             </div>
           </div>

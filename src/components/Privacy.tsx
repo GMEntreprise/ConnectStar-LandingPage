@@ -1,11 +1,21 @@
 import React from 'react';
 import { Shield, Lock, Eye, Database, UserCheck, Mail, ArrowLeft } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface PrivacyProps {
   onBack?: () => void;
 }
 
 const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
+  const { t } = useTranslation('legal');
+
+  const section1Items1 = t('privacy.section1.items1', { returnObjects: true }) as string[];
+  const section1Items2 = t('privacy.section1.items2', { returnObjects: true }) as string[];
+  const section2Items = t('privacy.section2.items', { returnObjects: true }) as string[];
+  const section2Warnings = t('privacy.section2.warnings', { returnObjects: true }) as string[];
+  const section3Items = t('privacy.section3.items', { returnObjects: true }) as string[];
+  const section4Items = t('privacy.section4.items', { returnObjects: true }) as string[];
+
   return (
     <section className="min-h-screen py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,17 +26,17 @@ const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
             className="flex items-center text-blue-600 hover:text-blue-700 mb-8 font-medium"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Retour à ConnectStar
+            {t('privacy.backButton')}
           </button>
         )}
 
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Politique de Confidentialité
+            {t('privacy.title')}
           </h2>
           <p className="text-lg text-gray-600">
-            Dernière mise à jour : Janvier 2025
+            {t('privacy.updated')}
           </p>
         </div>
 
@@ -34,12 +44,10 @@ const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
         <div className="bg-blue-50 rounded-2xl p-8 mb-8">
           <div className="flex items-center mb-4">
             <Shield className="w-8 h-8 text-blue-600 mr-3" />
-            <h3 className="text-xl font-semibold text-blue-900">Notre Engagement</h3>
+            <h3 className="text-xl font-semibold text-blue-900">{t('privacy.intro.title')}</h3>
           </div>
           <p className="text-blue-800 leading-relaxed">
-            ConnectStar a été créée sur une révélation divine pour protéger les données du peuple de Dieu. 
-            Contrairement à WhatsApp et autres messageries, nous ne vendons JAMAIS vos données personnelles. 
-            Votre vie privée spirituelle est sacrée.
+            {t('privacy.intro.content')}
           </p>
         </div>
 
@@ -49,21 +57,21 @@ const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="flex items-center mb-4">
               <Database className="w-6 h-6 text-green-600 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-900">1. Données Collectées</h3>
+              <h3 className="text-xl font-semibold text-gray-900">{t('privacy.section1.title')}</h3>
             </div>
             <div className="space-y-4 text-gray-700">
-              <p><strong>Données d'inscription :</strong></p>
+              <p><strong>{t('privacy.section1.subtitle1')}</strong></p>
               <ul className="list-disc list-inside ml-4 space-y-2">
-                <li>Adresse email (pour la liste d'attente)</li>
-                <li>Date d'inscription</li>
-                <li>Source d'inscription (landing page)</li>
+                {section1Items1.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
-              
-              <p><strong>Données d'utilisation future :</strong></p>
+
+              <p><strong>{t('privacy.section1.subtitle2')}</strong></p>
               <ul className="list-disc list-inside ml-4 space-y-2">
-                <li>Messages (chiffrés bout-à-bout)</li>
-                <li>Contacts (stockés localement)</li>
-                <li>Préférences spirituelles (Bible, prières)</li>
+                {section1Items2.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -72,21 +80,23 @@ const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="flex items-center mb-4">
               <Eye className="w-6 h-6 text-purple-600 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-900">2. Utilisation des Données</h3>
+              <h3 className="text-xl font-semibold text-gray-900">{t('privacy.section2.title')}</h3>
             </div>
             <div className="space-y-3 text-gray-700">
-              <p>Nous utilisons vos données uniquement pour :</p>
+              <p>{t('privacy.section2.intro')}</p>
               <ul className="list-disc list-inside ml-4 space-y-2">
-                <li>Vous informer du lancement de ConnectStar</li>
-                <li>Vous donner un accès prioritaire à la version bêta</li>
-                <li>Améliorer l'expérience utilisateur</li>
-                <li>Assurer la sécurité de la plateforme</li>
+                {section2Items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
               <div className="bg-red-50 border-l-4 border-red-400 p-4 mt-4">
                 <p className="text-red-800 font-medium">
-                  ❌ Nous ne vendons JAMAIS vos données à des tiers
-                  <br />❌ Aucune publicité ciblée
-                  <br />❌ Aucun tracking commercial
+                  {section2Warnings.map((warning, index) => (
+                    <React.Fragment key={index}>
+                      {warning}
+                      {index < section2Warnings.length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
                 </p>
               </div>
             </div>
@@ -96,15 +106,13 @@ const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="flex items-center mb-4">
               <Lock className="w-6 h-6 text-red-600 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-900">3. Sécurité et Chiffrement</h3>
+              <h3 className="text-xl font-semibold text-gray-900">{t('privacy.section3.title')}</h3>
             </div>
             <div className="space-y-3 text-gray-700">
               <ul className="list-disc list-inside space-y-2">
-                <li>Chiffrement bout-à-bout pour tous les messages</li>
-                <li>Serveurs hébergés dans des pays respectant la vie privée</li>
-                <li>Authentification sécurisée</li>
-                <li>Pas de sauvegarde des clés de chiffrement</li>
-                <li>Suppression automatique des messages temporaires</li>
+                {section3Items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -113,16 +121,14 @@ const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="flex items-center mb-4">
               <UserCheck className="w-6 h-6 text-blue-600 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-900">4. Vos Droits</h3>
+              <h3 className="text-xl font-semibold text-gray-900">{t('privacy.section4.title')}</h3>
             </div>
             <div className="space-y-3 text-gray-700">
-              <p>Vous avez le droit de :</p>
+              <p>{t('privacy.section4.intro')}</p>
               <ul className="list-disc list-inside ml-4 space-y-2">
-                <li>Consulter toutes vos données personnelles</li>
-                <li>Modifier ou corriger vos informations</li>
-                <li>Supprimer votre compte à tout moment</li>
-                <li>Exporter vos données</li>
-                <li>Vous désinscrire de la liste d'attente</li>
+                {section4Items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -131,15 +137,15 @@ const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="flex items-center mb-4">
               <Mail className="w-6 h-6 text-green-600 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-900">5. Contact</h3>
+              <h3 className="text-xl font-semibold text-gray-900">{t('privacy.section5.title')}</h3>
             </div>
             <div className="text-gray-700">
-              <p>Pour toute question concernant cette politique de confidentialité :</p>
+              <p>{t('privacy.section5.intro')}</p>
               <p className="mt-2">
-                📧 Email : <a href="mailto:connectstart.contact@gmail.com" className="text-blue-600 hover:underline">connectstart.contact@gmail.com</a>
+                {t('privacy.section5.email')} <a href="mailto:connectstart.contact@gmail.com" className="text-blue-600 hover:underline">connectstart.contact@gmail.com</a>
               </p>
               <p className="mt-2">
-                👨‍💻 Fondateur : Edouard GM
+                {t('privacy.section5.founder')}
               </p>
             </div>
           </div>
@@ -148,8 +154,7 @@ const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
         {/* Footer */}
         <div className="text-center mt-12 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-500">
-            Cette politique peut être mise à jour pour refléter les améliorations de ConnectStar. 
-            Les utilisateurs seront informés de tout changement majeur.
+            {t('privacy.footer')}
           </p>
         </div>
       </div>

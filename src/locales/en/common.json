@@ -1,0 +1,49 @@
+{
+  "header": {
+    "nav": {
+      "features": "Features",
+      "vision": "My Vision",
+      "faq": "FAQ",
+      "cta": "Join the waitlist"
+    }
+  },
+  "footer": {
+    "description": "The first modern Christian messaging app with integrated Bible. Connect in faith, grow together spiritually.",
+    "tagline": "Made with love for the Christian community",
+    "sections": {
+      "navigation": "Navigation",
+      "contact": "Contact",
+      "support": "SUPPORT & COMMUNITY"
+    },
+    "supportDescription": "I'm here to accompany you in your discovery of ConnectStar.",
+    "links": {
+      "features": "Features",
+      "vision": "My Vision",
+      "faq": "FAQ",
+      "signup": "Sign Up"
+    },
+    "stats": {
+      "signups": "People on waitlist",
+      "security": "Secure and no data selling",
+      "satisfaction": "Satisfaction rate",
+      "launch": "Launch year"
+    },
+    "copyright": "© {year} ConnectStar. All rights reserved. • Developed with passion for the Christian community.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "quote": "\"For where two or three gather in my name, there am I with them.\" - Matthew 18:20"
+  },
+  "emailForm": {
+    "placeholder": "Your contact email",
+    "submit": "Join the waitlist"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved. Return to the home page to discover ConnectStar.",
+    "homeButton": "Back to home",
+    "backButton": "Previous page",
+    "quote": "\"For where two or three gather in my name, there am I with them.\" - Matthew 18:20"
+  }
+}

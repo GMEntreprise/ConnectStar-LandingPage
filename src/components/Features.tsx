@@ -1,42 +1,44 @@
 import React from 'react';
 import { BookOpen, MessageSquare, Gift, Shield, Heart, Download } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Features = () => {
+  const { t } = useTranslation('home');
   const features = [
     {
       icon: BookOpen,
-      title: "Bible Intégrée",
-      description: "Accédez à la Bible directement dans vos conversations. Partagez des versets, méditez ensemble et enrichissez vos échanges spirituels.",
+      title: t("features.list.bible.title"),
+      description: t("features.list.bible.description"),
       highlight: true
     },
     {
       icon: MessageSquare,
-      title: "Messagerie Moderne",
-      description: "Interface fluide et intuitive inspirée des meilleures apps de messagerie. Messages instantanés, groupes, partage de médias.",
+      title: t("features.list.messaging.title"),
+      description: t("features.list.messaging.description"),
       highlight: false
     },
     {
       icon: Gift,
-      title: "Fonctionnalité Surprise 🎁",
-      description: "Une innovation révolutionnaire développée spécialement pour ConnectStar que nous dévoilerons bientôt. Préparez-vous à être émerveillés !",
+      title: t("features.list.surprise.title"),
+      description: t("features.list.surprise.description"),
       highlight: false
     },
     {
       icon: Shield,
-      title: "Sécurité Totale",
-      description: "Chiffrement bout-à-bout, authentification sécurisée et modération bienveillante pour un environnement sain.",
+      title: t("features.list.security.title"),
+      description: t("features.list.security.description"),
       highlight: false
     },
     {
       icon: Heart,
-      title: "Prière Collective",
-      description: "Organisez des temps de prière, partagez vos intentions et soutenez-vous mutuellement dans la foi.",
+      title: t("features.list.prayer.title"),
+      description: t("features.list.prayer.description"),
       highlight: false
     },
     {
       icon: Download,
-      title: "Accès Hors Ligne",
-      description: "Consultez vos conversations et la Bible même sans connexion internet. Idéal pour les temps de méditation et de retraite.",
+      title: t("features.list.offline.title"),
+      description: t("features.list.offline.description"),
       highlight: false
     }
   ];
@@ -47,10 +49,10 @@ const Features = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Application Chrétienne avec Bible Intégrée - Fonctionnalités
+            {t("features.header.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            ConnectStar combine la modernité des meilleures apps de messagerie avec les valeurs et besoins de la communauté chrétienne.
+            {t("features.header.description")}
           </p>
         </div>
 
@@ -70,7 +72,7 @@ const Features = () => {
                 {feature.highlight && (
                   <div className="absolute -top-3 left-6">
                     <span className="bg-gradient-to-r from-blue-600 to-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      UNIQUE
+                      {t("features.header.badge")}
                     </span>
                   </div>
                 )}
@@ -102,7 +104,7 @@ const Features = () => {
           <div className="inline-block bg-gradient-to-r from-blue-600 to-amber-500 p-0.5 rounded-full">
             <div className="bg-white rounded-full px-8 py-3">
               <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-500 font-semibold">
-                Et bien plus de fonctionnalités à découvrir...
+                {t("features.cta")}
               </p>
             </div>
           </div>

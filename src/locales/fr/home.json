@@ -1,0 +1,267 @@
+{
+  "hero": {
+    "badge": "Bientôt disponible sur iOS & Android",
+    "title": {
+      "part1": "Messagerie Chrétienne Moderne avec",
+      "highlight": "Bible Intégrée"
+    },
+    "subtitle": "ConnectStar est la première messagerie chrétienne moderne avec la Bible intégrée. Échangez, priez ensemble et grandissez spirituellement dans un espace sûr et inspirant.",
+    "values": {
+      "bible": "Bible intégrée",
+      "secure": "Sécurisé & privé",
+      "community": "Communauté bienveillante"
+    },
+    "cta": "Rejoindre la liste d'attente",
+    "platform": "Gratuit • iOS & Android • 2025",
+    "social": {
+      "part1": "Déjà",
+      "part2": "personnes inscrites"
+    }
+  },
+  "features": {
+    "header": {
+      "badge": "UNIQUE",
+      "title": "Application Chrétienne avec Bible Intégrée - Fonctionnalités",
+      "description": "ConnectStar combine la modernité des meilleures apps de messagerie avec les valeurs et besoins de la communauté chrétienne."
+    },
+    "list": {
+      "bible": {
+        "title": "Bible Intégrée",
+        "description": "Accédez à la Bible directement dans vos conversations. Partagez des versets, méditez ensemble et enrichissez vos échanges spirituels."
+      },
+      "messaging": {
+        "title": "Messagerie Moderne",
+        "description": "Interface fluide et intuitive inspirée des meilleures apps de messagerie. Messages instantanés, groupes, partage de médias."
+      },
+      "surprise": {
+        "title": "Fonctionnalité Surprise 🎁",
+        "description": "Une innovation révolutionnaire développée spécialement pour ConnectStar que nous dévoilerons bientôt. Préparez-vous à être émerveillés !"
+      },
+      "security": {
+        "title": "Sécurité Totale",
+        "description": "Chiffrement bout-à-bout, authentification sécurisée et modération bienveillante pour un environnement sain."
+      },
+      "prayer": {
+        "title": "Prière Collective",
+        "description": "Organisez des temps de prière, partagez vos intentions et soutenez-vous mutuellement dans la foi."
+      },
+      "offline": {
+        "title": "Accès Hors Ligne",
+        "description": "Consultez vos conversations et la Bible même sans connexion internet. Idéal pour les temps de méditation et de retraite."
+      }
+    },
+    "cta": "Et bien plus de fonctionnalités à découvrir..."
+  },
+  "vision": {
+    "header": {
+      "title": "Ma Vision pour ConnectStar",
+      "description": "Imaginer une messagerie qui ne se contente pas de connecter les téléphones, mais qui connecte véritablement les âmes dans la foi et l'amour du Christ."
+    },
+    "points": {
+      "connect": {
+        "title": "Connecter les cœurs dans la foi",
+        "description": "Créer des liens authentiques entre croyants du monde entier, au-delà des frontières géographiques et dénominationnelles."
+      },
+      "word": {
+        "title": "Rendre la Parole accessible",
+        "description": "Intégrer naturellement la Bible dans nos conversations quotidiennes pour nourrir notre croissance spirituelle."
+      },
+      "community": {
+        "title": "Bâtir une communauté bienveillante",
+        "description": "Offrir un espace sûr où chacun peut partager, grandir et être encouragé dans son parcours de foi."
+      },
+      "privacy": {
+        "title": "Protéger nos données spirituelles",
+        "description": "Garantir la confidentialité et la sécurité de nos échanges spirituels, loin des algorithmes commerciaux et de la surveillance."
+      }
+    },
+    "story": {
+      "title": "Pourquoi ConnectStar existe ? Une Révélation Divine",
+      "paragraphs": {
+        "p1": "En fin d'année 2024, Dieu m'a parlé sur WhatsApp.",
+        "p2": "Il m'a dit :",
+        "p2quote": "\"Mitch, WhatsApp vend les données des gens. Et cela ne s'arrêtera pas là.\"",
+        "p3a": "Alors je lui ai demandé :",
+        "p3b": "\"Seigneur, que veux-tu que je fasse ?\"",
+        "p3c": "Il m'a répondu :",
+        "p3d": "\"Je veux que tu développes une alternative de WhatsApp, mais pour les chrétiens. Je veux que mon peuple arrête d'utiliser WhatsApp.\"",
+        "p4a": "J'ai dit :",
+        "p4b": "\"D'accord Seigneur, donne-moi l'intelligence pour la créer.\"",
+        "p4c": "Puis j'ai demandé :",
+        "p4d": "\"Seigneur, comment s'appellera l'application ?\"",
+        "p4e": "Il m'a répondu :",
+        "p4f": "\"ConnectStar.\"",
+        "p5a": "Surpris, j'ai demandé :",
+        "p5b": "\"Mais Seigneur, que signifie ConnectStar ?\"",
+        "p5c": "Il m'a rappelé :",
+        "p5d": "\"Quand j'ai parlé à Abraham, je lui ai dit : regarde le ciel et compte les étoiles. Voilà ce que veut dire ConnectStar : Connectés jusqu'aux extrémités du monde.\"",
+        "p6": "Ainsi, Dieu m'a inspiré et guidé dans la création de cette application. Mon objectif à long terme est que tous les chrétiens qui connaissent et servent Jésus quittent WhatsApp, pour se rassembler sur ConnectStar.",
+        "p7": "Nous savons que dans les temps à venir, plus rien ne sera vraiment sécurisé. Si, comme moi, vous désirez changer les choses, rejoignez cette nouvelle aventure et contribuez à l'améliorer.",
+        "p8": "L'application sera en version bêta : certaines choses devront être perfectionnées, alors n'hésitez pas à me contacter pour partager vos suggestions."
+      },
+      "quote": "\"Regarde vers le ciel, et compte les étoiles, si tu peux les compter\"",
+      "reference": "- Genèse 15:5",
+      "founder": {
+        "name": "Edouard GM",
+        "title": "Fondateur de ConnectStar"
+      }
+    },
+    "values": {
+      "title": "Nos Valeurs Fondamentales",
+      "description": "Ces principes guident chaque décision dans le développement de ConnectStar",
+      "list": {
+        "authenticity": {
+          "title": "Authenticité",
+          "description": "Des échanges vrais et sincères, loin des artifices des réseaux sociaux traditionnels."
+        },
+        "kindness": {
+          "title": "Bienveillance",
+          "description": "Un environnement où règnent l'amour, le respect et l'encouragement mutuel."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Allier technologie moderne et valeurs éternelles pour servir la communauté chrétienne."
+        }
+      }
+    },
+    "cta": {
+      "title": "Rejoignez cette vision",
+      "description": "ConnectStar n'est pas qu'une application, c'est un mouvement pour transformer la façon dont nous vivons notre foi ensemble à l'ère numérique.",
+      "button": "Faire partie de l'aventure"
+    }
+  },
+  "testimonials": {
+    "header": {
+      "title": "Ils nous font déjà confiance",
+      "description": "Des leaders spirituels et membres de communautés chrétiennes partagent leur enthousiasme pour ConnectStar."
+    },
+    "list": [
+      {
+        "name": "Richard Garbin",
+        "role": "Président de l'assemblée connectée",
+        "content": "ConnectStar, enfin une application chrétienne de messages et d'appels. Elle sera équipée d'outils destinés aux chrétiens et, surtout, elle promet de ne pas partager les informations personnelles. Aucune de ses concurrentes, même les plus célèbres, ne propose cela. Je suis vraiment emballé à l'idée de découvrir tout cela."
+      },
+      {
+        "name": "Armand Kaczmarek",
+        "role": "Chef d'entreprise",
+        "content": "Je trouve le concept ConnectStar particulièrement nécessaire et judicieux pour les Chretiens. Notamment pour l'aspect confidentialité de nos données dans les temps qui arrivent. Bravo."
+      },
+      {
+        "name": "Marie Edouard",
+        "role": "Médecin Généraliste",
+        "content": "ConnectStar est une réelle révolution !\nUne innovation prometteuse pour réunir et rassembler des millions de chrétiens.\nConnectStar s'avère prometteuse pour élargir le réseau sur la toile entre chrétiens.\nÀ découvrir sans réserve !"
+      },
+      {
+        "name": "Sandrine  Arson",
+        "role": "Conducteur de louange",
+        "content": "Application chrétienne vraiment passionnante !!!\nUn projet qui vient du cœur de Dieu et qui unifie l'Eglise !!! Je vous encourage a participer a ce nouveau concept !"
+      },
+      {
+        "name": "Emmanuel Arson",
+        "role": "Conducteur de louange",
+        "content": "Avec cette application qui est nait du cœur de Dieu, je m'attend à de grandes choses et bien plus qu'un simple moyen d'échange et de communication. Je crois pleinement que la grâce et la faveur de notre Seigneur repose sur cette application pleine d'avenir."
+      },
+      {
+        "name": "Frédéric",
+        "role": "Expert IA",
+        "content": "L'application ConnectStar répond à une authentique inspiration de Dieu qu'il m'avait également communiquée. Quel bonheur de voir qu'un frère en Christ a réalisé lui-même un tel projet ! Pour garder le lien entre chrétiens nous avons besoin d'un réseau privé, hors des regards des GAFAM, pour échanger en toute confidentialité, sans compromettre nos données et en gardant d'un bout à l'autre la maîtrise totale de nos informations. C'est une clé importante pour le corps de Christ par les temps qui courent !"
+      }
+    ],
+    "stats": {
+      "signups": "Inscrits en attente",
+      "security": "Sécurisé et sans vente de données",
+      "satisfaction": "Taux de satisfaction",
+      "launch": "Année de lancement"
+    }
+  },
+  "faq": {
+    "header": {
+      "title": "Questions fréquentes",
+      "description": "Encore des questions ? Nous sommes là pour vous aider."
+    },
+    "categories": {
+      "divine": {
+        "title": "Vision Divine",
+        "questions": [
+          {
+            "question": "Pourquoi Dieu vous a-t-il appelé à créer ConnectStar ?",
+            "answer": "Au début de l'année 2025, Dieu m'a parlé clairement sur WhatsApp qui vend les données de Son peuple. Il m'a dit : 'Mitch, je veux que tu développes une application pour les chrétiens.' ConnectStar est née de cette révélation divine pour protéger et unir le Corps du Christ."
+          },
+          {
+            "question": "Que signifie le nom 'ConnectStar' ?",
+            "answer": "Dieu m'a rappelé sa promesse à Abraham : 'regarde le ciel et compte les étoiles.' ConnectStar signifie : Connectés jusqu'aux extrémités du monde. C'est une vision divine d'unité mondiale des chrétiens."
+          }
+        ]
+      },
+      "app": {
+        "title": "Application",
+        "questions": [
+          {
+            "question": "ConnectStar est-elle vraiment gratuite ?",
+            "answer": "Oui, ConnectStar sera toujours entièrement gratuite pour tous les utilisateurs. Aucun abonnement, aucun frais caché. C'est une mission divine, pas commerciale."
+          },
+          {
+            "question": "Quelle est cette fonctionnalité surprise 🎁 ?",
+            "answer": "C'est une innovation révolutionnaire que j'ai développée spécialement pour ConnectStar ! Je ne peux pas encore la dévoiler, mais elle va transformer votre expérience spirituelle. Les premiers inscrits la découvriront en exclusivité."
+          },
+          {
+            "question": "Quand l'application sera-t-elle disponible ?",
+            "answer": "ConnectStar sera lancée en version bêta fin d'année 2025. Les membres de la liste d'attente auront un accès prioritaire et testeront toutes les fonctionnalités en avant-première."
+          },
+          {
+            "question": "L'application aura-t-elle des bugs en version bêta ?",
+            "answer": "Oui, comme toute application en développement. Contrairement à WhatsApp, je n'ai pas leur financement, mais avec votre aide et vos retours, nous perfectionnerons ConnectStar ensemble."
+          }
+        ]
+      },
+      "support": {
+        "title": "Soutien & Donations",
+        "questions": [
+          {
+            "question": "Comment puis-je soutenir le développement de ConnectStar ?",
+            "answer": "ConnectStar est développée sans rémunération par passion pour le Corps du Christ. Vous pouvez nous aider par vos prières, en partageant le projet, et bientôt par des donations volontaires pour couvrir les coûts serveurs et accélérer le développement."
+          },
+          {
+            "question": "Pourquoi avez-vous besoin de donations ?",
+            "answer": "Je développe ConnectStar gratuitement depuis des mois pour accomplir la parole de Dieu. Les donations aideront à payer les serveurs, améliorer l'infrastructure et permettre un développement plus rapide pour servir plus efficacement le Corps du Christ."
+          },
+          {
+            "question": "ConnectStar peut-elle vraiment remplacer WhatsApp ?",
+            "answer": "C'est la vision que Dieu m'a donnée ! Mon objectif à long terme est que tous les chrétiens qui connaissent et servent Jésus quittent WhatsApp pour se rassembler sur ConnectStar. Ensemble, nous pouvons y arriver."
+          }
+        ]
+      }
+    },
+    "cta": {
+      "text": "Vous n'avez pas trouvé la réponse ?",
+      "button": "Contactez-moi directement"
+    }
+  },
+  "signup": {
+    "success": {
+      "title": "Bienvenue dans l'aventure ConnectStar ! 🎉",
+      "description": "Votre inscription a été confirmée. Vous recevrez un email de bienvenue dans quelques minutes avec tous les détails sur le lancement.",
+      "warning": {
+        "title": "📧 Important - Vérifiez vos spams !",
+        "text1": "Ce message peut parfois arriver dans votre dossier spam ou courrier indésirable. Pensez à ajouter",
+        "text2": "à vos contacts pour recevoir toutes nos communications."
+      },
+      "bonus": {
+        "title": "Bonus Early Access",
+        "description": "En tant qu'inscrit précoce, vous aurez accès à la version bêta et à des fonctionnalités exclusives !"
+      }
+    },
+    "default": {
+      "title": "Rejoignez la révolution de la messagerie chrétienne",
+      "subtitle": "Soyez parmi les premiers à découvrir ConnectStar",
+      "benefits": {
+        "beta": "Accès prioritaire à la bêta",
+        "exclusive": "Fonctionnalités exclusives",
+        "participate": "Participez au développement",
+        "surprise": "Fonctionnalité surprise 🎁"
+      },
+      "trust": "📧 Pas de spam • 🔒 Données sécurisées • ❌ Désabonnement en un clic",
+      "disclaimer": "En vous inscrivant, vous acceptez de recevoir des mises à jour sur ConnectStar. Vos données sont protégées selon notre politique de confidentialité."
+    }
+  }
+}

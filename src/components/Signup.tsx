@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { CheckCircle, Gift, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import EmailForm from './EmailForm';
 import SignupCounter from './SignupCounter';
 
 const Signup = () => {
+  const { t } = useTranslation('home');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSuccess = () => {
@@ -20,32 +22,30 @@ const Signup = () => {
             </div>
             
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Bienvenue dans l'aventure ConnectStar ! 🎉
+              {t("signup.success.title")}
             </h2>
-            
+
             <p className="text-gray-600 mb-6">
-              Votre inscription a été confirmée. Vous recevrez un email de bienvenue dans quelques minutes avec tous les détails sur le lancement.
+              {t("signup.success.description")}
             </p>
 
             <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 mb-8">
               <div className="flex items-center justify-center mb-3">
                 <Mail className="w-5 h-5 text-yellow-600 mr-2" />
-                <h3 className="text-yellow-800 font-semibold">📧 Important - Vérifiez vos spams !</h3>
+                <h3 className="text-yellow-800 font-semibold">{t("signup.success.warning.title")}</h3>
               </div>
               <p className="text-sm text-yellow-700 text-center">
-                Ce message peut parfois arriver dans votre dossier spam ou courrier indésirable. 
-                Pensez à ajouter <strong>connectstart.contact@gmail.com</strong> à vos contacts 
-                pour recevoir toutes nos communications.
+                {t("signup.success.warning.text1")} <strong>connectstart.contact@gmail.com</strong> {t("signup.success.warning.text2")}
               </p>
             </div>
 
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border-2 border-blue-100">
               <div className="flex items-center justify-center space-x-2 mb-3">
                 <Gift className="w-5 h-5 text-blue-600" />
-                <span className="font-semibold text-blue-800">Bonus Early Access</span>
+                <span className="font-semibold text-blue-800">{t("signup.success.bonus.title")}</span>
               </div>
               <p className="text-sm text-gray-700">
-                En tant qu'inscrit précoce, vous aurez accès à la version bêta et à des fonctionnalités exclusives !
+                {t("signup.success.bonus.description")}
               </p>
             </div>
           </div>
@@ -61,10 +61,10 @@ const Signup = () => {
           {/* Header */}
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Rejoignez la révolution de la messagerie chrétienne
+              {t("signup.default.title")}
             </h2>
             <p className="text-xl text-gray-600">
-              Soyez parmi les premiers à découvrir ConnectStar
+              {t("signup.default.subtitle")}
             </p>
           </div>
 
@@ -72,19 +72,19 @@ const Signup = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             <div className="flex items-center space-x-3 text-gray-700">
               <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-              <span className="text-sm">Accès prioritaire à la bêta</span>
+              <span className="text-sm">{t("signup.default.benefits.beta")}</span>
             </div>
             <div className="flex items-center space-x-3 text-gray-700">
               <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-              <span className="text-sm">Fonctionnalités exclusives</span>
+              <span className="text-sm">{t("signup.default.benefits.exclusive")}</span>
             </div>
             <div className="flex items-center space-x-3 text-gray-700">
               <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-              <span className="text-sm">Participez au développement</span>
+              <span className="text-sm">{t("signup.default.benefits.participate")}</span>
             </div>
             <div className="flex items-center space-x-3 text-gray-700">
               <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-              <span className="text-sm">Fonctionnalité surprise 🎁</span>
+              <span className="text-sm">{t("signup.default.benefits.surprise")}</span>
             </div>
           </div>
 
@@ -94,11 +94,10 @@ const Signup = () => {
           {/* Trust Indicators */}
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-500 mb-4">
-              📧 Pas de spam • 🔒 Données sécurisées • ❌ Désabonnement en un clic
+              {t("signup.default.trust")}
             </p>
             <div className="text-xs text-gray-400">
-              En vous inscrivant, vous acceptez de recevoir des mises à jour sur ConnectStar. 
-              Vos données sont protégées selon notre politique de confidentialité.
+              {t("signup.default.disclaimer")}
             </div>
           </div>
 
