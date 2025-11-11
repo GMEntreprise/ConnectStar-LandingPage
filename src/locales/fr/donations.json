@@ -1,0 +1,204 @@
+{
+  "hero": {
+    "badge": "Soutenez une mission divine",
+    "title": "Donnez avec joie ❤️",
+    "subtitle": "Chaque don aide à protéger les données du peuple de Dieu et à faire grandir la Parole",
+    "verse": "Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec joie.",
+    "verseReference": "2 Corinthiens 9:7"
+  },
+  "amounts": {
+    "title": "Choisissez votre contribution",
+    "oneTime": "Don unique",
+    "monthly": "Don mensuel",
+    "presets": {
+      "5": {
+        "amount": "5€",
+        "impact": "1 heure de serveur sécurisé"
+      },
+      "10": {
+        "amount": "10€",
+        "impact": "Support d'un développeur"
+      },
+      "20": {
+        "amount": "20€",
+        "impact": "Fonctionnalité biblique"
+      },
+      "50": {
+        "amount": "50€",
+        "impact": "Hébergement mensuel"
+      },
+      "100": {
+        "amount": "100€",
+        "impact": "Nouvelle fonctionnalité"
+      }
+    },
+    "custom": "Montant personnalisé",
+    "customPlaceholder": "Entrez un montant",
+    "currency": "€"
+  },
+  "why": {
+    "title": "Pourquoi donner ?",
+    "subtitle": "Votre générosité permet de bâtir un espace sûr pour le Corps du Christ",
+    "reasons": [
+      {
+        "title": "Soutenir la communauté",
+        "description": "Offrir un espace sécurisé où les chrétiens peuvent échanger librement dans la foi"
+      },
+      {
+        "title": "Faire grandir la Parole",
+        "description": "Développer des fonctionnalités bibliques innovantes pour nourrir la croissance spirituelle"
+      },
+      {
+        "title": "Protéger nos données",
+        "description": "Maintenir des serveurs sécurisés qui ne vendent jamais les données du peuple de Dieu"
+      }
+    ]
+  },
+  "transparency": {
+    "title": "Où vont vos dons ?",
+    "subtitle": "Transparence totale sur l'utilisation de chaque euro",
+    "breakdown": [
+      {
+        "percentage": "60%",
+        "title": "Serveurs & Hébergement",
+        "description": "Infrastructure sécurisée et chiffrée pour protéger vos échanges spirituels et garantir la disponibilité 24/7"
+      },
+      {
+        "percentage": "40%",
+        "title": "Développement",
+        "description": "Amélioration continue des fonctionnalités, intégration biblique et nouvelles fonctionnalités spirituelles"
+      }
+    ]
+  },
+  "impact": {
+    "title": "Impact de votre générosité",
+    "counter": {
+      "prefix": "Déjà",
+      "suffix": "dons reçus 🎉"
+    },
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Sécurisé et transparent"
+      },
+      {
+        "value": "0€",
+        "label": "Vendu aux GAFAM"
+      },
+      {
+        "value": "∞",
+        "label": "Gratitude envers vous"
+      }
+    ]
+  },
+  "form": {
+    "title": "Compléter votre don",
+    "fields": {
+      "name": {
+        "label": "Nom complet",
+        "placeholder": "Jean Dupont",
+        "error": "Le nom est requis"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "jean@example.com",
+        "error": "Email invalide"
+      },
+      "message": {
+        "label": "Message (optionnel)",
+        "placeholder": "Partagez une intention de prière ou un mot d'encouragement..."
+      }
+    },
+    "anonymous": "Je souhaite rester anonyme",
+    "newsletter": "Me tenir informé(e) des nouvelles de ConnectStar",
+    "submit": "Donner avec joie ❤️",
+    "submitting": "Traitement en cours...",
+    "secure": "Don 100% gratuit via HelloAsso"
+  },
+  "trust": {
+    "title": "Votre don est entre de bonnes mains",
+    "items": [
+      "🔒 Paiement 100% sécurisé",
+      "✅ 0% de commission - 100% pour la mission",
+      "📧 Reçu fiscal automatique",
+      "💝 Plateforme HelloAsso reconnue"
+    ]
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Puis-je obtenir un reçu fiscal ?",
+        "answer": "Oui ! Un reçu vous sera automatiquement envoyé par email après votre don. ConnectStar est en cours d'obtention du statut d'association d'intérêt général pour permettre la déductibilité fiscale."
+      },
+      {
+        "question": "Mes coordonnées bancaires sont-elles sécurisées ?",
+        "answer": "Absolument. Nous utilisons Stripe, la plateforme de paiement la plus sécurisée au monde. Vos données bancaires sont chiffrées et nous ne les stockons jamais sur nos serveurs."
+      },
+      {
+        "question": "Puis-je annuler mon don mensuel ?",
+        "answer": "Oui, vous pouvez annuler votre don mensuel à tout moment depuis votre espace donateur ou en nous contactant directement. Aucune obligation, aucune contrainte."
+      },
+      {
+        "question": "Pourquoi ConnectStar demande des dons s'il est gratuit ?",
+        "answer": "ConnectStar restera toujours gratuit car c'est une mission divine, pas commerciale. Les dons permettent de couvrir les coûts d'infrastructure (serveurs, sécurité) et de développer de nouvelles fonctionnalités spirituelles sans jamais vendre vos données."
+      },
+      {
+        "question": "Comment puis-je aider autrement que par un don financier ?",
+        "answer": "Vous pouvez prier pour la mission, partager ConnectStar dans votre communauté, rejoindre notre équipe de bêta-testeurs, ou contribuer par vos compétences (développement, design, traduction)."
+      },
+      {
+        "question": "Où puis-je voir l'utilisation des fonds ?",
+        "answer": "Nous publions régulièrement des rapports de transparence sur notre site et auprès de nos donateurs. Chaque euro est utilisé avec intégrité pour servir le Corps du Christ."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce qu'ils disent de ConnectStar",
+    "items": [
+      {
+        "name": "Emmanuel Arson",
+        "role": "Président de l'assemblée connectée",
+        "text": "De cette application qui est née du cœur de Dieu, j'en attends de grandes choses",
+        "rating": 5
+      },
+      {
+        "name": "Sandrine Arson",
+        "role": "Conductrice de louange",
+        "text": "Un projet qui vient du cœur de Dieu et qui unifie l'Église",
+        "rating": 5
+      },
+      {
+        "name": "Richard Garbin",
+        "role": "Médecin généraliste",
+        "text": "Promet de ne pas partager les informations personnelles. Aucun de ses concurrents, même les plus célèbres, ne propose cela",
+        "rating": 5
+      }
+    ]
+  },
+  "cta": {
+    "title": "Chaque geste compte",
+    "subtitle": "Que vous donniez 5€ ou 100€, chaque contribution est une bénédiction qui nous rapproche de la vision que Dieu a donnée",
+    "button": "Je donne maintenant",
+    "alternative": "Ou soutenez-nous par la prière"
+  },
+  "success": {
+    "title": "Merci de tout cœur ! 🙏",
+    "subtitle": "Votre générosité est une bénédiction",
+    "message": "Votre don a été reçu avec gratitude. Vous recevrez un reçu par email dans quelques instants. Que Dieu vous bénisse abondamment pour votre soutien à cette mission divine.",
+    "share": {
+      "title": "Partagez la vision",
+      "description": "Invitez vos frères et sœurs en Christ à découvrir ConnectStar",
+      "button": "Partager ConnectStar"
+    },
+    "next": {
+      "title": "Et maintenant ?",
+      "items": [
+        "📧 Vous recevrez des nouvelles régulières du projet",
+        "🙏 Votre nom sera dans nos prières de reconnaissance",
+        "✨ Vous contribuez à bâtir un espace sûr pour le Corps du Christ"
+      ]
+    },
+    "backButton": "Retour à l'accueil"
+  }
+}

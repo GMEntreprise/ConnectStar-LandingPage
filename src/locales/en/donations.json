@@ -1,0 +1,204 @@
+{
+  "hero": {
+    "badge": "Support a divine mission",
+    "title": "Give with joy ❤️",
+    "subtitle": "Every donation helps protect God's people's data and grow the Word",
+    "verse": "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.",
+    "verseReference": "2 Corinthians 9:7"
+  },
+  "amounts": {
+    "title": "Choose your contribution",
+    "oneTime": "One-time gift",
+    "monthly": "Monthly gift",
+    "presets": {
+      "5": {
+        "amount": "€5",
+        "impact": "1 hour of secure server"
+      },
+      "10": {
+        "amount": "€10",
+        "impact": "Developer support"
+      },
+      "20": {
+        "amount": "€20",
+        "impact": "Biblical feature"
+      },
+      "50": {
+        "amount": "€50",
+        "impact": "Monthly hosting"
+      },
+      "100": {
+        "amount": "€100",
+        "impact": "New feature"
+      }
+    },
+    "custom": "Custom amount",
+    "customPlaceholder": "Enter an amount",
+    "currency": "€"
+  },
+  "why": {
+    "title": "Why give?",
+    "subtitle": "Your generosity helps build a safe space for the Body of Christ",
+    "reasons": [
+      {
+        "title": "Support the community",
+        "description": "Provide a secure space where Christians can freely exchange in faith"
+      },
+      {
+        "title": "Grow the Word",
+        "description": "Develop innovative biblical features to nurture spiritual growth"
+      },
+      {
+        "title": "Protect our data",
+        "description": "Maintain secure servers that never sell God's people's data"
+      }
+    ]
+  },
+  "transparency": {
+    "title": "Where do your donations go?",
+    "subtitle": "Complete transparency on how every euro is used",
+    "breakdown": [
+      {
+        "percentage": "60%",
+        "title": "Servers & Hosting",
+        "description": "Secure and encrypted infrastructure to protect your spiritual exchanges and guarantee 24/7 availability"
+      },
+      {
+        "percentage": "40%",
+        "title": "Development",
+        "description": "Continuous improvement of features, biblical integration and new spiritual functionalities"
+      }
+    ]
+  },
+  "impact": {
+    "title": "Impact of your generosity",
+    "counter": {
+      "prefix": "Already",
+      "suffix": "donations received 🎉"
+    },
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Secure and transparent"
+      },
+      {
+        "value": "€0",
+        "label": "Sold to Big Tech"
+      },
+      {
+        "value": "∞",
+        "label": "Gratitude towards you"
+      }
+    ]
+  },
+  "form": {
+    "title": "Complete your donation",
+    "fields": {
+      "name": {
+        "label": "Full name",
+        "placeholder": "John Doe",
+        "error": "Name is required"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "john@example.com",
+        "error": "Invalid email"
+      },
+      "message": {
+        "label": "Message (optional)",
+        "placeholder": "Share a prayer request or word of encouragement..."
+      }
+    },
+    "anonymous": "I wish to remain anonymous",
+    "newsletter": "Keep me updated on ConnectStar news",
+    "submit": "Give with joy ❤️",
+    "submitting": "Processing...",
+    "secure": "100% free donation via HelloAsso"
+  },
+  "trust": {
+    "title": "Your donation is in good hands",
+    "items": [
+      "🔒 100% secure payment",
+      "✅ 0% commission - 100% for the mission",
+      "📧 Automatic tax receipt",
+      "💝 Trusted HelloAsso platform"
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Can I get a tax receipt?",
+        "answer": "Yes! A receipt will be automatically sent to you by email after your donation. ConnectStar is in the process of obtaining non-profit status to enable tax deductibility."
+      },
+      {
+        "question": "Are my banking details secure?",
+        "answer": "Absolutely. We use Stripe, the world's most secure payment platform. Your banking data is encrypted and we never store it on our servers."
+      },
+      {
+        "question": "Can I cancel my monthly donation?",
+        "answer": "Yes, you can cancel your monthly donation at any time from your donor space or by contacting us directly. No obligation, no constraint."
+      },
+      {
+        "question": "Why does ConnectStar ask for donations if it's free?",
+        "answer": "ConnectStar will always remain free because it's a divine mission, not a commercial one. Donations help cover infrastructure costs (servers, security) and develop new spiritual features without ever selling your data."
+      },
+      {
+        "question": "How can I help other than financially?",
+        "answer": "You can pray for the mission, share ConnectStar in your community, join our beta-testing team, or contribute your skills (development, design, translation)."
+      },
+      {
+        "question": "Where can I see how funds are used?",
+        "answer": "We regularly publish transparency reports on our website and to our donors. Every euro is used with integrity to serve the Body of Christ."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What they say about ConnectStar",
+    "items": [
+      {
+        "name": "Emmanuel Arson",
+        "role": "President of the connected assembly",
+        "text": "From this app that was born from God's heart, I expect great things",
+        "rating": 5
+      },
+      {
+        "name": "Sandrine Arson",
+        "role": "Worship Leader",
+        "text": "A project that comes from God's heart and unifies the Church",
+        "rating": 5
+      },
+      {
+        "name": "Richard Garbin",
+        "role": "General Practitioner",
+        "text": "Promises not to share personal information. None of its competitors, even the most famous, offer that",
+        "rating": 5
+      }
+    ]
+  },
+  "cta": {
+    "title": "Every gesture counts",
+    "subtitle": "Whether you give €5 or €100, every contribution is a blessing that brings us closer to the vision God has given",
+    "button": "I give now",
+    "alternative": "Or support us through prayer"
+  },
+  "success": {
+    "title": "Thank you from the bottom of our hearts! 🙏",
+    "subtitle": "Your generosity is a blessing",
+    "message": "Your donation has been received with gratitude. You will receive a receipt by email in a few moments. May God bless you abundantly for your support of this divine mission.",
+    "share": {
+      "title": "Share the vision",
+      "description": "Invite your brothers and sisters in Christ to discover ConnectStar",
+      "button": "Share ConnectStar"
+    },
+    "next": {
+      "title": "What's next?",
+      "items": [
+        "📧 You'll receive regular project updates",
+        "🙏 Your name will be in our prayers of thanksgiving",
+        "✨ You're helping build a safe space for the Body of Christ"
+      ]
+    },
+    "backButton": "Back to home"
+  }
+}

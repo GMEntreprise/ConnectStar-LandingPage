@@ -1,16 +1,17 @@
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Vision from './components/Vision';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import Signup from './components/Signup';
-import Footer from './components/Footer';
-import Privacy from './components/Privacy';
-import Terms from './components/Terms';
-import NotFound from './components/NotFound';
-import { useSeoMeta } from './hooks/useSeoMeta';
+import { Route, Routes } from "react-router-dom";
+import Donations from "./components/Donations";
+import FAQ from "./components/FAQ";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import NotFound from "./components/NotFound";
+import Privacy from "./components/Privacy";
+import Signup from "./components/Signup";
+import Terms from "./components/Terms";
+import Testimonials from "./components/Testimonials";
+import Vision from "./components/Vision";
+import { useSeoMeta } from "./hooks/useSeoMeta";
 
 const HomePage = () => (
   <>
@@ -40,6 +41,7 @@ function App() {
             path="/terms"
             element={<Terms onBack={() => window.history.back()} />}
           />
+          <Route path="/donations" element={<Donations />} />
           <Route
             path="*"
             element={<NotFound onBack={() => window.history.back()} />}

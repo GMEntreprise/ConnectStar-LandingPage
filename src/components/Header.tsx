@@ -1,16 +1,32 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo-connectStar.webp";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
+  const handleDonateClick = () => {
+    navigate("/donations");
     setIsMenuOpen(false);
   };
 
@@ -21,7 +37,7 @@ const Header = () => {
           {/* Logo + Brand */}
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-              <img className="ml-1 h-6" src={logo} alt="ConnectStar" />
+              <img className="ml-1 h-15" src={logo} alt="ConnectStar" />
             </div>
             <span className="text-xl font-bold text-gray-900">ConnectStar</span>
           </div>
@@ -32,26 +48,32 @@ const Header = () => {
               onClick={() => scrollToSection("features")}
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              {t('header.nav.features')}
+              {t("header.nav.features")}
             </button>
             <button
               onClick={() => scrollToSection("vision")}
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              {t('header.nav.vision')}
+              {t("header.nav.vision")}
             </button>
             <button
               onClick={() => scrollToSection("faq")}
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              {t('header.nav.faq')}
+              {t("header.nav.faq")}
             </button>
+            {/* <button
+              onClick={handleDonateClick}
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+            >
+              {t("header.nav.donate")} ❤️
+            </button> */}
             <LanguageSwitcher />
             <button
               onClick={() => scrollToSection("signup")}
               className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
-              {t('header.nav.cta')}
+              {t("header.nav.cta")}
             </button>
           </nav>
 
@@ -75,19 +97,25 @@ const Header = () => {
               onClick={() => scrollToSection("features")}
               className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4"
             >
-              {t('header.nav.features')}
+              {t("header.nav.features")}
             </button>
             <button
               onClick={() => scrollToSection("vision")}
               className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4"
             >
-              {t('header.nav.vision')}
+              {t("header.nav.vision")}
             </button>
             <button
               onClick={() => scrollToSection("faq")}
               className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4"
             >
-              {t('header.nav.faq')}
+              {t("header.nav.faq")}
+            </button>
+            <button
+              onClick={handleDonateClick}
+              className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-4 font-medium"
+            >
+              {t("header.nav.donate")} ❤️
             </button>
             <div className="px-4 flex justify-center">
               <LanguageSwitcher />
@@ -97,7 +125,7 @@ const Header = () => {
                 onClick={() => scrollToSection("signup")}
                 className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md text-center"
               >
-                {t('header.nav.cta')}
+                {t("header.nav.cta")}
               </button>
             </div>
           </div>

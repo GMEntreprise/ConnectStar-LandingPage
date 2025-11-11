@@ -8,6 +8,8 @@ import homeFr from '../locales/fr/home.json';
 import homeEn from '../locales/en/home.json';
 import legalFr from '../locales/fr/legal.json';
 import legalEn from '../locales/en/legal.json';
+import donationsFr from '../locales/fr/donations.json';
+import donationsEn from '../locales/en/donations.json';
 
 i18n
   .use(LanguageDetector)
@@ -18,11 +20,13 @@ i18n
         common: commonFr,
         home: homeFr,
         legal: legalFr,
+        donations: donationsFr,
       },
       en: {
         common: commonEn,
         home: homeEn,
         legal: legalEn,
+        donations: donationsEn,
       },
     },
     fallbackLng: 'fr',
